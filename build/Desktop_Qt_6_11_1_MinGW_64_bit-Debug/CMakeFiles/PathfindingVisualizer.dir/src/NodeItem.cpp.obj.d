@@ -1,6 +1,6 @@
 CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.obj: \
- C:\code\map\PathfindingVisualizer_Qt6_C++\ (1)\src\NodeItem.cpp \
- C:\code\map\PathfindingVisualizer_Qt6_C++\ (1)\src\NodeItem.h \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (5)\src\NodeItem.cpp \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (5)\src\NodeItem.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsEllipseItem \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsitem.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -376,7 +376,7 @@ CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qpen.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qbrush.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/QBrush \
- C:\code\map\PathfindingVisualizer_Qt6_C++\ (1)\src\Graph.h \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (5)\src\Graph.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QPointF \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QMap \
@@ -389,18 +389,77 @@ CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qabstracteventdispatcher.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qeventloop.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qdeadlinetimer.h \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/QToolTip \
- C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtooltip.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsSceneMouseEvent \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsScene \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsscene.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qfont.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qendian.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsView \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsview.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qpainter.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtextoption.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qfontinfo.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qfontvariableaxis.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qfontmetrics.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qscrollarea.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qframe.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qwidget.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qaction.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qkeysequence.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qicon.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qpalette.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qfont.h \
- C:/Qt/6.11.1/mingw_64/include/QtCore/qendian.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qfontmetrics.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qfontinfo.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qfontvariableaxis.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qsizepolicy.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qcursor.h \
- C:/Qt/6.11.1/mingw_64/include/QtGui/qbitmap.h
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qbitmap.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QToolTip \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtooltip.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMenu \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmenu.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/QAction \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (5)\src\MainWindow.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMainWindow \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmainwindow.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtabwidget.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QComboBox \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qcombobox.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstyleoption.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractspinbox.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qvalidator.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qregularexpression.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qslider.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractslider.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstyle.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtabbar.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qrubberband.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qabstractitemmodel.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QPushButton \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qpushbutton.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractbutton.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QSlider \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLabel \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlabel.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qpicture.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qiodevice.h \
+ C:/Qt/6.11.1/mingw_64/include/QtGui/qtextdocument.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qurl.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTableWidget \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtablewidget.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtableview.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemview.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qitemselectionmodel.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QListWidget \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistwidget.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistview.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTreeWidget \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtreewidget.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtreeview.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtreewidgetitemiterator.h \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (5)\src\AnimationController.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QObject \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QTimer \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/qtimer.h \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (5)\src\Algorithms.h \
+ C:/Qt/6.11.1/mingw_64/include/QtCore/QSet

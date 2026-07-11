@@ -364,6 +364,7 @@ void MainWindow::handleClearPath() {
     m_statCurrNode->setText("Current Node: --");
     m_statVisited->setText("Visited Nodes: 0");
     m_statDistance->setText("Total distance: --");
+    m_statDistance->setStyleSheet("");
 
     for (QGraphicsItem *item : m_scene->items()) {
         if (auto *nodeItem = dynamic_cast<NodeItem*>(item)) {
@@ -441,6 +442,35 @@ void MainWindow::updateUiForStep(const PathfindingStep &step) {
     }
 
     // Highlight elements visually inside scene
+    QSet<QString> midPathNodes;
+    if (!step.finalPathEdges.isEmpty()) {
+        for (const QString &edgeKey : step.finalPathEdges) {
+            QStringList parts = edgeKey.split('_');
+            if (parts.size() == 2) {
+                QString node1 = parts.at(0);
+                QString node2 = parts.at(1);
+                if (node1 != m_selectedStartNodeId && node1 != m_selectedEndNodeId) {
+                    midPathNodes.insert(node1);
+                }
+                if (node2 != m_selectedStartNodeId && node2 != m_selectedEndNodeId) {
+                    midPathNodes.insert(node2);
+                }
+            } else {
+                for (const Edge &e : m_graph.getEdges()) {
+                    if (e.id == edgeKey) {
+                        if (e.sourceId != m_selectedStartNodeId && e.sourceId != m_selectedEndNodeId) {
+                            midPathNodes.insert(e.sourceId);
+                        }
+                        if (e.targetId != m_selectedStartNodeId && e.targetId != m_selectedEndNodeId) {
+                            midPathNodes.insert(e.targetId);
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
     for (QGraphicsItem *item : m_scene->items()) {
         if (auto *nodeItem = dynamic_cast<NodeItem*>(item)) {
             QString id = nodeItem->getNodeId();
@@ -448,6 +478,8 @@ void MainWindow::updateUiForStep(const PathfindingStep &step) {
                 nodeItem->setVisualState(NodeItem::State::Start);
             } else if (id == m_selectedEndNodeId) {
                 nodeItem->setVisualState(NodeItem::State::End);
+            } else if (midPathNodes.contains(id)) {
+                nodeItem->setVisualState(NodeItem::State::Default);
             } else if (id == step.currentNodeId) {
                 nodeItem->setVisualState(NodeItem::State::Active);
             } else if (step.visitedNodes.contains(id)) {
@@ -457,7 +489,11 @@ void MainWindow::updateUiForStep(const PathfindingStep &step) {
             }
         } else if (auto *edgeItem = dynamic_cast<EdgeItem*>(item)) {
             QString eId = edgeItem->getEdgeId();
-            if (step.finalPathEdges.contains(eId)) {
+            QString sId = edgeItem->getSourceId();
+            QString tId = edgeItem->getTargetId();
+            QString key1 = sId + "_" + tId;
+            QString key2 = tId + "_" + sId;
+            if (step.finalPathEdges.contains(eId) || step.finalPathEdges.contains(key1) || step.finalPathEdges.contains(key2)) {
                 edgeItem->setVisualState(EdgeItem::State::ShortestPath);
             } else if (step.activeEdgeId == eId) {
                 edgeItem->setVisualState(EdgeItem::State::Relaxed);
@@ -469,6 +505,7 @@ void MainWindow::updateUiForStep(const PathfindingStep &step) {
 
     if (step.type == PathfindingStep::Type::PathFound) {
         m_statDistance->setText(QString("Total distance: %1 m").arg(step.totalDistance, 0, 'f', 1));
+        m_statDistance->setStyleSheet("QLabel { background-color: #FEF08A; color: #854D0E; font-weight: bold; padding: 2px; border: 1px solid #FACC15; border-radius: 2px; }");
         QMessageBox::information(this, "Success", QString("Optimal path rendered successfully! Distance: %1 meters.").arg(step.totalDistance, 0, 'f', 1));
     } else if (step.type == PathfindingStep::Type::NoPath) {
         m_statDistance->setText("Unreachable");

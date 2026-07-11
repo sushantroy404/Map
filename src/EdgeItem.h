@@ -16,6 +16,8 @@ public:
     ~EdgeItem() = default;
 
     QString getEdgeId() const { return m_edge.id; }
+    QString getSourceId() const { return m_edge.sourceId; }
+    QString getTargetId() const { return m_edge.targetId; }
     void setVisualState(State state);
 
 protected:

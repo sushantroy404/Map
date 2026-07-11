@@ -5,6 +5,8 @@
 #include <QBrush>
 #include "Graph.h"
 
+class QGraphicsSceneMouseEvent;
+
 class NodeItem : public QGraphicsEllipseItem {
 public:
     enum class State {
@@ -24,6 +26,7 @@ public:
 protected:
     void hoverEnterEvent(QGraphicsSceneHoverEvent *event) override;
     void hoverLeaveEvent(QGraphicsSceneHoverEvent *event) override;
+    void mousePressEvent(QGraphicsSceneMouseEvent *event) override;
 
 private:
     Node m_node;

@@ -19,6 +19,7 @@ class MainWindow : public QMainWindow {
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow() = default;
+    void handleNodeSelected(const QString &nodeId, bool isStart);
 
 private slots:
     void handleImportOsm();
@@ -34,7 +35,6 @@ private slots:
     void handleExportScreenshot();
     void handleSaveProject();
     void handleOpenProject();
-    void handleNodeSelected(const QString &nodeId, bool isStart);
     
     // Animation callbacks
     void updateUiForStep(const PathfindingStep &step);

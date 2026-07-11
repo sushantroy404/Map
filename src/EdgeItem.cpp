@@ -38,7 +38,7 @@ void EdgeItem::setVisualState(State state) {
             baseWidth += 1.0;
             break;
         case State::ShortestPath:
-            pen.setColor(QColor("#4CAF50"));
+            pen.setColor(QColor("#FFD700"));
             pen.setStyle(Qt::SolidLine);
             baseWidth += 2.0;
             break;

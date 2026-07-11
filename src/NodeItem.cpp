@@ -1,6 +1,12 @@
 #include "NodeItem.h"
 #include <QGraphicsSceneHoverEvent>
+#include <QGraphicsSceneMouseEvent>
+#include <QGraphicsScene>
+#include <QGraphicsView>
 #include <QToolTip>
+#include <QMenu>
+#include <QAction>
+#include "MainWindow.h"
 
 NodeItem::NodeItem(const Node &node, QGraphicsItem *parent)
     : QGraphicsEllipseItem(-4, -4, 8, 8, parent), m_node(node), m_state(State::Default) {
@@ -53,4 +59,34 @@ void NodeItem::hoverLeaveEvent(QGraphicsSceneHoverEvent *event) {
     setVisualState(m_state);
     QToolTip::hideText();
     QGraphicsEllipseItem::hoverLeaveEvent(event);
+}
+
+void NodeItem::mousePressEvent(QGraphicsSceneMouseEvent *event) {
+    if (event->button() == Qt::LeftButton) {
+        QMenu menu;
+        QAction *setStart = menu.addAction("Set as Start Node");
+        QAction *setEnd = menu.addAction("Set as Destination Node");
+        
+        QAction *selected = menu.exec(event->screenPos());
+        if (selected == setStart) {
+            if (scene()) {
+                QList<QGraphicsView*> views = scene()->views();
+                if (!views.isEmpty()) {
+                    if (auto *mainWindow = qobject_cast<MainWindow*>(views.first()->window())) {
+                        mainWindow->handleNodeSelected(m_node.id, true);
+                    }
+                }
+            }
+        } else if (selected == setEnd) {
+            if (scene()) {
+                QList<QGraphicsView*> views = scene()->views();
+                if (!views.isEmpty()) {
+                    if (auto *mainWindow = qobject_cast<MainWindow*>(views.first()->window())) {
+                        mainWindow->handleNodeSelected(m_node.id, false);
+                    }
+                }
+            }
+        }
+    }
+    QGraphicsEllipseItem::mousePressEvent(event);
 }

@@ -20,6 +20,9 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow() = default;
 
+protected:
+    bool eventFilter(QObject *watched, QEvent *event) override;
+
 private slots:
     void handleImportOsm();
     void handleRunAlgorithm();
@@ -34,7 +37,6 @@ private slots:
     void handleExportScreenshot();
     void handleSaveProject();
     void handleOpenProject();
-    void handleNodeSelected(const QString &nodeId, bool isStart);
     
     // Animation callbacks
     void updateUiForStep(const PathfindingStep &step);
@@ -48,6 +50,8 @@ private:
     void createRightPanel();
     void setupConnections();
     void loadGraphIntoScene();
+    void handleStartNodeChanged(int index);
+    void handleEndNodeChanged(int index);
 
     // Model data
     Graph m_graph;
@@ -58,7 +62,17 @@ private:
     QComboBox *m_algoCombo;
     QComboBox *m_startNodeCombo;
     QComboBox *m_endNodeCombo;
-    QPushButton *m_importBtn;
+    QPushButton *m_pickStartBtn;
+    QPushButton *m_pickEndBtn;
+    QLabel *m_selectionHint;
+
+    enum class SelectionTarget { Start, End };
+    SelectionTarget m_selectionTarget = SelectionTarget::Start;
+
+    void setSelectionTarget(SelectionTarget target);
+    void selectNodeFromMap(const QString &nodeId);
+    void refreshSelectionMarkers();
+
     QPushButton *m_runBtn;
     QPushButton *m_pauseBtn;
     QPushButton *m_resumeBtn;

@@ -75,7 +75,7 @@ std::vector<PathfindingStep> DijkstraAlgorithm::solve(const Graph &graph, const 
         });
 
         if (u == endId) {
-            steps.push_back({
+            PathfindingStep pathFound{
                 PathfindingStep::Type::PathFound,
                 ++stepIdx,
                 u,
@@ -86,9 +86,9 @@ std::vector<PathfindingStep> DijkstraAlgorithm::solve(const Graph &graph, const 
                 parent,
                 "Goal achieved!",
                 dist[endId]
-            });
-            // Tack on the final reconstructed path
-            steps.back().totalDistance = dist[endId];
+            };
+            pathFound.finalPathEdges = reconstructPath(parent, startId, endId, graph.getEdges());
+            steps.push_back(std::move(pathFound));
             return steps;
         }
 
@@ -193,7 +193,7 @@ std::vector<PathfindingStep> AStarAlgorithm::solve(const Graph &graph, const QSt
         });
 
         if (u == endId) {
-            steps.push_back({
+            PathfindingStep pathFound{
                 PathfindingStep::Type::PathFound,
                 ++stepIdx,
                 u,
@@ -204,7 +204,9 @@ std::vector<PathfindingStep> AStarAlgorithm::solve(const Graph &graph, const QSt
                 parent,
                 "A* search finished successfully.",
                 gScore[endId]
-            });
+            };
+            pathFound.finalPathEdges = reconstructPath(parent, startId, endId, graph.getEdges());
+            steps.push_back(std::move(pathFound));
             return steps;
         }
 
@@ -310,7 +312,7 @@ std::vector<PathfindingStep> BFSAlgorithm::solve(const Graph &graph, const QStri
                 current = p;
             }
 
-            steps.push_back({
+            PathfindingStep pathFound{
                 PathfindingStep::Type::PathFound,
                 ++stepIdx,
                 u,
@@ -321,7 +323,9 @@ std::vector<PathfindingStep> BFSAlgorithm::solve(const Graph &graph, const QStri
                 parent,
                 "BFS goal hit!",
                 realDist
-            });
+            };
+            pathFound.finalPathEdges = reconstructPath(parent, startId, endId, graph.getEdges());
+            steps.push_back(std::move(pathFound));
             return steps;
         }
 

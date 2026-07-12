@@ -404,94 +404,31 @@ PathfindingVisualizer_autogen/timestamp: C:/Qt/6.11.1/mingw_64/include/QtCore/QM
   C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Xml/Qt6XmlTargetsPrecheck.cmake \
   C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Xml/Qt6XmlVersionlessAliasTargets.cmake \
   C:/Qt/Tools/CMake_64/bin/cmake.exe \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCompilerIdDetection.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineRCCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeMinGWFindMake.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseImplicitIncludeInfo.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseImplicitLinkInfo.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseLibraryArchitecture.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCCompiler.cmake.in \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystem.cmake.in \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestCompilerCommon.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestRCCompiler.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXCompilerFlag.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckIncludeFileCXX.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckLibraryExists.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/ADSP-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Borland-DetermineCompiler.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Cray-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CrayClang-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GHS-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-FindBinUtils.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IAR-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Intel-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/MSVC-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/OrangeC-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/PGI-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/PathScale-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/SCO-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/TI-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/TIClang-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Tasking-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Watcom-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindThreads.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindVulkan.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckFlagCommonConfig.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake \
-  C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Determine-CXX.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake \
   C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake \
@@ -712,7 +649,7 @@ PathfindingVisualizer_autogen/timestamp: C:/Qt/6.11.1/mingw_64/include/QtCore/QM
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/CMakeLists.txt \
+  C:/Users/HP/Downloads/Map-main/Map-main/CMakeLists.txt \
   .qtcreator/cmake-helper/maintenance_tool_provider.cmake \
   .qtcreator/cmake-helper/package-manager.cmake \
   .qtcreator/cmake-helper/qtcreator-project.cmake \
@@ -720,22 +657,22 @@ PathfindingVisualizer_autogen/timestamp: C:/Qt/6.11.1/mingw_64/include/QtCore/QM
   CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
   CMakeFiles/3.30.5/CMakeSystem.cmake \
   PathfindingVisualizer_autogen/moc_predefs.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Algorithms.cpp \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Algorithms.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/AnimationController.cpp \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/AnimationController.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/CoordinateTransformer.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/EdgeItem.cpp \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/EdgeItem.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Graph.cpp \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Graph.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/MainWindow.cpp \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/MainWindow.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/NodeItem.cpp \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/NodeItem.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/OsmLoader.cpp \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/OsmLoader.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/main.cpp
+  C:/Users/HP/Downloads/Map-main/Map-main/src/Algorithms.cpp \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/Algorithms.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/AnimationController.cpp \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/AnimationController.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/CoordinateTransformer.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/EdgeItem.cpp \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/EdgeItem.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/Graph.cpp \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/Graph.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/MainWindow.cpp \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/MainWindow.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/NodeItem.cpp \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/NodeItem.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/OsmLoader.cpp \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/OsmLoader.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/main.cpp
 
 CMakeFiles/PathfindingVisualizer.dir/PathfindingVisualizer_autogen/mocs_compilation.cpp.obj: PathfindingVisualizer_autogen/mocs_compilation.cpp \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QMap \
@@ -1187,14 +1124,14 @@ CMakeFiles/PathfindingVisualizer.dir/PathfindingVisualizer_autogen/mocs_compilat
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Algorithms.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/AnimationController.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Graph.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/MainWindow.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/Algorithms.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/AnimationController.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/Graph.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/MainWindow.h \
   PathfindingVisualizer_autogen/UVLADIE3JM/moc_AnimationController.cpp \
   PathfindingVisualizer_autogen/UVLADIE3JM/moc_MainWindow.cpp
 
-CMakeFiles/PathfindingVisualizer.dir/src/Algorithms.cpp.obj: C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Algorithms.cpp \
+CMakeFiles/PathfindingVisualizer.dir/src/Algorithms.cpp.obj: C:/Users/HP/Downloads/Map-main/Map-main/src/Algorithms.cpp \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QMap \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QPointF \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QSet \
@@ -1511,10 +1448,10 @@ CMakeFiles/PathfindingVisualizer.dir/src/Algorithms.cpp.obj: C:/code/map/Pathfin
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Algorithms.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Graph.h
+  C:/Users/HP/Downloads/Map-main/Map-main/src/Algorithms.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/Graph.h
 
-CMakeFiles/PathfindingVisualizer.dir/src/AnimationController.cpp.obj: C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/AnimationController.cpp \
+CMakeFiles/PathfindingVisualizer.dir/src/AnimationController.cpp.obj: C:/Users/HP/Downloads/Map-main/Map-main/src/AnimationController.cpp \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QMap \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QObject \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QPointF \
@@ -1857,11 +1794,11 @@ CMakeFiles/PathfindingVisualizer.dir/src/AnimationController.cpp.obj: C:/code/ma
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Algorithms.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/AnimationController.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Graph.h
+  C:/Users/HP/Downloads/Map-main/Map-main/src/Algorithms.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/AnimationController.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/Graph.h
 
-CMakeFiles/PathfindingVisualizer.dir/src/EdgeItem.cpp.obj: C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/EdgeItem.cpp \
+CMakeFiles/PathfindingVisualizer.dir/src/EdgeItem.cpp.obj: C:/Users/HP/Downloads/Map-main/Map-main/src/EdgeItem.cpp \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QMap \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QPointF \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
@@ -2263,10 +2200,10 @@ CMakeFiles/PathfindingVisualizer.dir/src/EdgeItem.cpp.obj: C:/code/map/Pathfindi
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/EdgeItem.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Graph.h
+  C:/Users/HP/Downloads/Map-main/Map-main/src/EdgeItem.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/Graph.h
 
-CMakeFiles/PathfindingVisualizer.dir/src/Graph.cpp.obj: C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Graph.cpp \
+CMakeFiles/PathfindingVisualizer.dir/src/Graph.cpp.obj: C:/Users/HP/Downloads/Map-main/Map-main/src/Graph.cpp \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QMap \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QPointF \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
@@ -2575,14 +2512,20 @@ CMakeFiles/PathfindingVisualizer.dir/src/Graph.cpp.obj: C:/code/map/PathfindingV
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Graph.h
+  C:/Users/HP/Downloads/Map-main/Map-main/src/Graph.h
 
-CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj: C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/MainWindow.cpp \
+CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj: C:/Users/HP/Downloads/Map-main/Map-main/src/MainWindow.cpp \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QElapsedTimer \
+  C:/Qt/6.11.1/mingw_64/include/QtCore/QEvent \
+  C:/Qt/6.11.1/mingw_64/include/QtCore/QList \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QMap \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QObject \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QPointF \
+  C:/Qt/6.11.1/mingw_64/include/QtCore/QRect \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QSet \
+  C:/Qt/6.11.1/mingw_64/include/QtCore/QSignalBlocker \
+  C:/Qt/6.11.1/mingw_64/include/QtCore/QSize \
+  C:/Qt/6.11.1/mingw_64/include/QtCore/QSizeF \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QVector \
@@ -2626,6 +2569,9 @@ CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj: C:/code/map/Pathfin
   C:/Qt/6.11.1/mingw_64/include/QtCore/qcontainerinfo.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qcontainertools_impl.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qcontiguouscache.h \
+  C:/Qt/6.11.1/mingw_64/include/QtCore/qcoreapplication.h \
+  C:/Qt/6.11.1/mingw_64/include/QtCore/qcoreapplication_platform.h \
+  C:/Qt/6.11.1/mingw_64/include/QtCore/qcoreevent.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qdatastream.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qdatetime.h \
@@ -2668,6 +2614,7 @@ CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj: C:/code/map/Pathfin
   C:/Qt/6.11.1/mingw_64/include/QtCore/qmetatype.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qminmax.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qnamespace.h \
+  C:/Qt/6.11.1/mingw_64/include/QtCore/qnativeinterface.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qnumeric.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qobject.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qobject_impl.h \
@@ -2736,20 +2683,30 @@ CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj: C:/code/map/Pathfin
   C:/Qt/6.11.1/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/qyieldcpu.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/QBrush \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/QMouseEvent \
   C:/Qt/6.11.1/mingw_64/include/QtGui/QPainter \
   C:/Qt/6.11.1/mingw_64/include/QtGui/QPen \
   C:/Qt/6.11.1/mingw_64/include/QtGui/QPixmap \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/QShortcut \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/QTransform \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/QWheelEvent \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qbrush.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qcolor.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qcursor.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qevent.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qeventpoint.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qfont.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qfontinfo.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qfontmetrics.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qfontvariableaxis.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qguiapplication.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qguiapplication_platform.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qicon.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qimage.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qinputdevice.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qinputmethod.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpaintdevice.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpainter.h \
@@ -2759,10 +2716,14 @@ CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj: C:/code/map/Pathfin
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpicture.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpixmap.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qpointingdevice.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qpolygon.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qregion.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qrgb.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qrgba64.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qscreen.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qscreen_platform.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qshortcut.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qtextdocument.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qtextoption.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qtgui-config.h \
@@ -2770,6 +2731,8 @@ CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj: C:/code/map/Pathfin
   C:/Qt/6.11.1/mingw_64/include/QtGui/qtguiglobal.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qvalidator.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qvector2d.h \
+  C:/Qt/6.11.1/mingw_64/include/QtGui/qvectornd.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qwindowdefs_win.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QComboBox \
@@ -2779,6 +2742,7 @@ CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj: C:/code/map/Pathfin
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsLineItem \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsScene \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsView \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QHBoxLayout \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QHeaderView \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLabel \
@@ -3091,15 +3055,15 @@ CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj: C:/code/map/Pathfin
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Algorithms.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/AnimationController.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/EdgeItem.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Graph.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/MainWindow.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/NodeItem.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/OsmLoader.h
+  C:/Users/HP/Downloads/Map-main/Map-main/src/Algorithms.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/AnimationController.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/EdgeItem.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/Graph.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/MainWindow.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/NodeItem.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/OsmLoader.h
 
-CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.obj: C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/NodeItem.cpp \
+CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.obj: C:/Users/HP/Downloads/Map-main/Map-main/src/NodeItem.cpp \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QMap \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QPointF \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
@@ -3502,10 +3466,10 @@ CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.obj: C:/code/map/Pathfindi
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Graph.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/NodeItem.h
+  C:/Users/HP/Downloads/Map-main/Map-main/src/Graph.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/NodeItem.h
 
-CMakeFiles/PathfindingVisualizer.dir/src/OsmLoader.cpp.obj: C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/OsmLoader.cpp \
+CMakeFiles/PathfindingVisualizer.dir/src/OsmLoader.cpp.obj: C:/Users/HP/Downloads/Map-main/Map-main/src/OsmLoader.cpp \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QDebug \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QFile \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QMap \
@@ -3893,11 +3857,11 @@ CMakeFiles/PathfindingVisualizer.dir/src/OsmLoader.cpp.obj: C:/code/map/Pathfind
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/CoordinateTransformer.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Graph.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/OsmLoader.h
+  C:/Users/HP/Downloads/Map-main/Map-main/src/CoordinateTransformer.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/Graph.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/OsmLoader.h
 
-CMakeFiles/PathfindingVisualizer.dir/src/main.cpp.obj: C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/main.cpp \
+CMakeFiles/PathfindingVisualizer.dir/src/main.cpp.obj: C:/Users/HP/Downloads/Map-main/Map-main/src/main.cpp \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QMap \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QObject \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QPointF \
@@ -4351,10 +4315,10 @@ CMakeFiles/PathfindingVisualizer.dir/src/main.cpp.obj: C:/code/map/PathfindingVi
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Algorithms.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/AnimationController.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Graph.h \
-  C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/MainWindow.h
+  C:/Users/HP/Downloads/Map-main/Map-main/src/Algorithms.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/AnimationController.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/Graph.h \
+  C:/Users/HP/Downloads/Map-main/Map-main/src/MainWindow.h
 
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qdarwinhelpers.h:
@@ -4362,8 +4326,6 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qdarwinhelpers.h:
 C:/Qt/6.11.1/mingw_64/include/QtCore/QMap:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/QVector:
-
-C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Graph.cpp:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qfunctionpointer.h:
 
@@ -4399,6 +4361,10 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qforeach.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qanystringview.h:
 
+C:/Qt/6.11.1/mingw_64/include/QtCore/qmap.h:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_defines.h:
+
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qapplication.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/q20utility.h:
@@ -4408,10 +4374,6 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qobject_impl.h:
 C:/Qt/6.11.1/mingw_64/include/QtGui/qrgba64.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_defines.h:
-
-C:/Qt/6.11.1/mingw_64/include/QtCore/qmap.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qcompare.h:
 
@@ -4424,6 +4386,8 @@ C:/Qt/6.11.1/mingw_64/include/QtGui/qimage.h:
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginAdditionalTargetInfo.cmake:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/QTimer:
+
+C:/Qt/6.11.1/mingw_64/include/QtGui/qvector2d.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sec_api/stdio_s.h:
 
@@ -4457,6 +4421,8 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/utility:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/q20functional.h:
 
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGridLayout:
+
 C:/Qt/6.11.1/mingw_64/include/QtCore/qcontainerfwd.h:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake:
@@ -4479,6 +4445,8 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/q23utility.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake:
 
+C:/Qt/6.11.1/mingw_64/include/QtGui/QMouseEvent:
+
 C:/Qt/6.11.1/mingw_64/include/QtCore/q23type_traits.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake:
@@ -4497,13 +4465,11 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qabstractitemmodel.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qbindingstorage.h:
 
-C:/Qt/6.11.1/mingw_64/include/QtCore/qalgorithms.h:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/NVIDIA-DetermineCompiler.cmake:
-
 C:/Qt/6.11.1/mingw_64/include/QtCore/qtenvironmentvariables.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake:
+
+C:/Qt/6.11.1/mingw_64/include/QtCore/qalgorithms.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/pstl_config.h:
 
@@ -4533,9 +4499,9 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/QDebug:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qatomic.h:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multimap.h:
-
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multimap.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qbasicatomic.h:
 
@@ -4575,9 +4541,13 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qdatastream.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtabbar.h:
 
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memoryfwd.h:
+
 C:/Qt/6.11.1/mingw_64/include/QtCore/qcomparehelpers.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/Qt6ConfigExtras.cmake:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memory_resource.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qcompilerdetection.h:
 
@@ -4591,8 +4561,6 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qconstructormacros.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qcontainerinfo.h:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake:
-
 .qtcreator/cmake-helper/package-manager.cmake:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qdeadlinetimer.h:
@@ -4600,8 +4568,6 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qdeadlinetimer.h:
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtooltip.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qendian.h:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Intel-DetermineCompiler.cmake:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qflags.h:
 
@@ -4617,9 +4583,9 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qgenericatomic.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qglobalstatic.h:
 
-C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/main.cpp:
-
 C:/Qt/6.11.1/mingw_64/include/QtCore/qhash.h:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_relops.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qiodevicebase.h:
 
@@ -4627,9 +4593,9 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qiterable.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qoverload.h:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_function.h:
-
 C:/Qt/6.11.1/mingw_64/include/QtCore/qiterator.h:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_function.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake:
 
@@ -4649,6 +4615,8 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qsystemdetection.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qlocale.h:
 
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_base.h:
+
 C:/Qt/6.11.1/mingw_64/include/QtCore/qmalloc.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qmargins.h:
@@ -4662,6 +4630,8 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qmetacontainer.h:
 C:/Qt/6.11.1/mingw_64/include/QtGui/qcolor.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qmetatype.h:
+
+C:/Users/HP/Downloads/Map-main/Map-main/src/Graph.cpp:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qnamespace.h:
 
@@ -4677,17 +4647,19 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/q20algorithm.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qobjectdefs.h:
 
-C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets.cmake:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_set.h:
+C:/Qt/6.11.1/mingw_64/include/QtCore/qobjectdefs_impl.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator_base_types.h:
 
-C:/Qt/6.11.1/mingw_64/include/QtCore/qobjectdefs_impl.h:
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_set.h:
+
+C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets.cmake:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qpair.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:
+
+C:/Qt/6.11.1/mingw_64/include/QtGui/qevent.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qfileinfo.h:
 
@@ -4711,11 +4683,7 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qrect.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qstyleoption.h:
 
-C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Graph.h:
-
 C:/Qt/6.11.1/mingw_64/include/QtCore/qrefcount.h:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/NVHPC-DetermineCompiler.cmake:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/streambuf:
 
@@ -4739,6 +4707,8 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stri
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qshareddata.h:
 
+C:/Qt/6.11.1/mingw_64/include/QtGui/qscreen_platform.h:
+
 C:/Qt/6.11.1/mingw_64/include/QtCore/qshareddata_impl.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qtnoop.h:
@@ -4750,6 +4720,8 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/array:
 C:/Qt/6.11.1/mingw_64/include/QtCore/qsharedpointer_impl.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qsize.h:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/new_allocator.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qspan.h:
 
@@ -4775,17 +4747,17 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qstringbuilder.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qtcore-config.h:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:
-
 C:/Qt/6.11.1/mingw_64/include/QtCore/qstringconverter.h:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/nested_exception.h:
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_raw_storage_iter.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qstringconverter_base.h:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cpp_type_traits.h:
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/nested_exception.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qstringfwd.h:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cpp_type_traits.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qstringlist.h:
 
@@ -4801,19 +4773,17 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qstringview.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qswap.h:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CrayClang-DetermineCompiler.cmake:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/refwrap.h:
-
 C:/Qt/6.11.1/mingw_64/include/QtCore/qsysinfo.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistview.h:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multiset.h:
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/refwrap.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qtaggedpointer.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multiset.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h:
 
@@ -4828,8 +4798,6 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qtcoreexports.h:
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsIntegrationPluginTargets-relwithdebinfo.cmake:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qtcoreglobal.h:
 
@@ -4853,9 +4821,9 @@ C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/pthread_compat.h:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h:
-
 C:/Qt/6.11.1/mingw_64/include/QtCore/qtmetamacros.h:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/vector:
 
@@ -4883,21 +4851,21 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qtypeinfo.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qtypes.h:
 
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/move.h:
+
 C:/Qt/6.11.1/mingw_64/include/QtCore/qurl.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtGui/qbitmap.h:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp:
-
 C:/Qt/6.11.1/mingw_64/include/QtCore/qvariant.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtCore/QSize:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicGitHelpers.cmake:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qvector.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicExternalProjectHelpers.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompilerInternal.cmake:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qversiontagging.h:
 
@@ -4911,11 +4879,11 @@ C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicSbomSystemDepHelpers.cmake:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qyieldcpu.h:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/PathScale-DetermineCompiler.cmake:
-
 C:/Qt/6.11.1/mingw_64/include/QtGui/qaction.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtGui/qbrush.h:
+
+C:/Users/HP/Downloads/Map-main/Map-main/src/EdgeItem.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/Qt6TargetsPrecheck.cmake:
 
@@ -4939,9 +4907,9 @@ C:/Qt/6.11.1/mingw_64/include/QtGui/qfontinfo.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QICOPluginConfig.cmake:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_function.h:
-
 C:/Qt/6.11.1/mingw_64/include/QtGui/qfontvariableaxis.h:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_function.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_off_t.h:
 
@@ -4973,11 +4941,11 @@ C:/Qt/6.11.1/mingw_64/include/QtGui/qpicture.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtGui/qpixelformat.h:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/postypes.h:
+C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QSvgIconPluginAdditionalTargetInfo.cmake:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/concept_check.h:
 
-C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QSvgIconPluginAdditionalTargetInfo.cmake:
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/postypes.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtGui/qpixmap.h:
 
@@ -4993,13 +4961,11 @@ C:/Qt/6.11.1/mingw_64/include/QtGui/qtextdocument.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qpushbutton.h:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:
+C:/Qt/6.11.1/mingw_64/include/QtGui/qinputdevice.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtGui/qtextoption.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtGui/qtgui-config.h:
-
-C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/MainWindow.cpp:
 
 C:/Qt/6.11.1/mingw_64/include/QtGui/qtguiexports.h:
 
@@ -5019,8 +4985,6 @@ C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_timeval.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtGui/qvalidator.h:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineRCCompiler.cmake:
-
 C:/Qt/6.11.1/mingw_64/include/QtGui/qwindowdefs.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_stat64.h:
@@ -5029,7 +4993,7 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/version:
 
 C:/Qt/6.11.1/mingw_64/include/QtGui/qwindowdefs_win.h:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Borland-DetermineCompiler.cmake:
+C:/Qt/6.11.1/mingw_64/include/QtGui/QWheelEvent:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/QComboBox:
 
@@ -5041,8 +5005,6 @@ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QListWidget:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreVersionlessAliasTargets.cmake:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake:
-
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMainWindow:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake:
@@ -5051,11 +5013,11 @@ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QPushButton:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/QSlider:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU.cmake:
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTableWidget:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/charconv.h:
 
-C:/Qt/6.11.1/mingw_64/include/QtWidgets/QTableWidget:
+C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU.cmake:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qnativeinterface.h:
 
@@ -5087,13 +5049,11 @@ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qframe.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsscene.h:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/TIClang-DetermineCompiler.cmake:
-
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsview.h:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_pair.h:
-
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlabel.h:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_pair.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistwidget.h:
 
@@ -5127,6 +5087,10 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtableview.h:
 
+C:/Qt/6.11.1/mingw_64/include/QtGui/QPainter:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hashtable_policy.h:
+
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtabwidget.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtreewidget.h:
@@ -5140,6 +5104,10 @@ C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QGifPluginAdditionalTargetInfo.cmake:
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtwidgetsexports.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Xml/Qt6XmlTargets-relwithdebinfo.cmake:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/invoke.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qwidget.h:
 
@@ -5175,8 +5143,6 @@ C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtInstallPaths.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicAndroidHelpers.cmake:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake:
-
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicAppleHelpers.cmake:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/memory:
@@ -5205,19 +5171,11 @@ C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicSbomBuildToolHelpers.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsIntegrationPluginConfig.cmake:
 
-C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/CMakeLists.txt:
-
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicSbomCommonGenerationHelpers.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qheaderview.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicSbomCpeHelpers.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicSbomCycloneDXHelpers.cmake:
 
@@ -5227,9 +5185,9 @@ C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Xml/Qt6XmlConfigVersion.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicSbomDepHelpers.cmake:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h:
-
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsDirect2DIntegrationPluginConfig.cmake:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sys/types.h:
 
@@ -5241,9 +5199,9 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/atomic:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake:
 
-C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicSbomGenerationCycloneDXHelpers.cmake:
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ios_base.h:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Fujitsu-DetermineCompiler.cmake:
+C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicSbomGenerationCycloneDXHelpers.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake:
 
@@ -5259,13 +5217,15 @@ C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicSbomOpsHelpers.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QICOPluginTargets-relwithdebinfo.cmake:
 
+C:/Users/HP/Downloads/Map-main/Map-main/src/AnimationController.cpp:
+
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicSbomPurlHelpers.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicSbomPythonHelpers.cmake:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hashtable.h:
-
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hashtable.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicSbomQtEntityHelpers.cmake:
 
@@ -5281,6 +5241,8 @@ C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicTestHelpers.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicToolHelpers.cmake:
 
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h:
+
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_secapi.h:
@@ -5295,23 +5257,23 @@ C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginConfig.cm
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator.h:
-
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreTargetsPrecheck.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_construct.h:
-
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_construct.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_heap.h:
-
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsDirect2DIntegrationPluginAdditionalTargetInfo.cmake:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_heap.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/unordered_set:
 
@@ -5363,6 +5325,8 @@ C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QGifPluginTargetsPrecheck.cmake:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.h:
 
+C:/Qt/6.11.1/mingw_64/include/QtCore/QSizeF:
+
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QICOPluginTargetsPrecheck.cmake:
@@ -5373,8 +5337,6 @@ C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QJpegPluginAdditionalTargetInfo.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QJpegPluginConfig.cmake:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake:
-
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginAdditionalTargetInfo.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets-relwithdebinfo.cmake:
@@ -5382,8 +5344,6 @@ C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets-relwi
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets.cmake:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/align.h:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestCompilerCommon.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargetsPrecheck.cmake:
 
@@ -5395,9 +5355,9 @@ C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets-relwithdebinfo.cmake:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tempbuf.h:
-
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfig.cmake:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tempbuf.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/QApplication:
 
@@ -5406,8 +5366,6 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/poly_
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets-relwithdebinfo.cmake:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_abs.h:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QSvgPluginAdditionalTargetInfo.cmake:
 
@@ -5427,9 +5385,9 @@ C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsDirect2DIntegrationPluginTarge
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsDirect2DIntegrationPluginTargets.cmake:
 
-C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsDirect2DIntegrationPluginTargetsPrecheck.cmake:
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_forced.h:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake:
+C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsDirect2DIntegrationPluginTargetsPrecheck.cmake:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets_nonio.tcc:
 
@@ -5445,13 +5403,17 @@ C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsIntegrationPluginTargets.cmake
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsIntegrationPluginTargetsPrecheck.cmake:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/node_handle.h:
-
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake:
 
-C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake:
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/node_handle.h:
 
-C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/NodeItem.h:
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialog.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/QFileDialog:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hash_bytes.h:
+
+C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_set.h:
 
@@ -5459,25 +5421,25 @@ C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargetsPrecheck.cmake:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/AppleClang-DetermineCompiler.cmake:
-
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/execution_defs.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets.cmake:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystem.cmake.in:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/PGI-DetermineCompiler.cmake:
-
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/localefwd.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/algorithmfwd.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtGui/qscreen.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake:
 
@@ -5488,6 +5450,12 @@ C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake:
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargetsPrecheck.cmake:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtGui/QTransform:
+
+C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/ctype.h:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr.h:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessAliasTargets.cmake:
 
@@ -5505,19 +5473,13 @@ C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmak
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-relwithdebinfo.cmake:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeMinGWFindMake.cmake:
-
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Xml/Qt6XmlDependencies.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:
 
 C:/Qt/6.11.1/mingw_64/lib/cmake/Qt6Xml/Qt6XmlTargets.cmake:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception.h:
-
 C:/Qt/Tools/CMake_64/bin/cmake.exe:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in:
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception.h:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake:
 
@@ -5525,105 +5487,25 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCompilerIdDetection.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake:
-
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseImplicitIncludeInfo.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseImplicitLinkInfo.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseLibraryArchitecture.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCCompiler.cmake.in:
-
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestRCCompiler.cmake:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckIncludeFileCXX.cmake:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckLibraryExists.cmake:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/ADSP-DetermineCompiler.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/ARMCC-DetermineCompiler.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/ARMClang-DetermineCompiler.cmake:
-
-C:/Qt/6.11.1/mingw_64/include/QtCore/qtmochelpers.h:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompiler.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Cray-DetermineCompiler.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Embarcadero-DetermineCompiler.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GHS-DetermineCompiler.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake:
-
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h:
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iomanip:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-FindBinUtils.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/HP-CXX-DetermineCompiler.cmake:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IAR-DetermineCompiler.cmake:
-
-C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/special_function_util.h:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tree.h:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/MSVC-DetermineCompiler.cmake:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator_base_funcs.h:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Tasking-DetermineCompiler.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/OrangeC-DetermineCompiler.cmake:
-
-C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/corecrt_stdio_config.h:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/SCO-DetermineCompiler.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/TI-DetermineCompiler.cmake:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_map.h:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Watcom-DetermineCompiler.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/XL-CXX-DetermineCompiler.cmake:
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functional_hash.h:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindThreads.cmake:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/parse_numbers.h:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qcoreapplication_platform.h:
 
@@ -5634,10 +5516,6 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/poly_
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckFlagCommonConfig.cmake:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_algo.h:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Determine-CXX.cmake:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake:
 
@@ -5659,7 +5537,13 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/legen
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_lockfree_defines.h:
 
+C:/Qt/6.11.1/mingw_64/include/QtGui/qeventpoint.h:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/erase_if.h:
+
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.tcc:
+
+C:/Users/HP/Downloads/Map-main/Map-main/src/Algorithms.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/char_traits.h:
 
@@ -5667,37 +5551,13 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/deque:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/chrono.h:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_forced.h:
-
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_init_exception.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/enable_special_members.h:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/erase_if.h:
-
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_ptr.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functexcept.h:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iomanip:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functional_hash.h:
-
-C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialog.h:
-
-C:/Qt/6.11.1/mingw_64/include/QtWidgets/QFileDialog:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hash_bytes.h:
-
-C:/Qt/6.11.1/mingw_64/include/QtGui/QPainter:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hashtable_policy.h:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/invoke.h:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ios_base.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/list.tcc:
 
@@ -5705,49 +5565,35 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/loca
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_classes.tcc:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/localefwd.h:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memory_resource.h:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memoryfwd.h:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/move.h:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/new_allocator.h:
-
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream_insert.h:
 
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/parse_numbers.h:
+
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/predefined_ops.h:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h:
-
-C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/ctype.h:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_atomic.h:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_base.h:
-
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/specfun.h:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_algo.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_algobase.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_bvector.h:
 
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator_base_funcs.h:
+
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ios:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_list.h:
 
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_map.h:
+
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_numeric.h:
 
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_raw_storage_iter.h:
-
-C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_relops.h:
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tree.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h:
 
@@ -5766,6 +5612,8 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unif
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unique_ptr.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator.h:
+
+C:/Users/HP/Downloads/Map-main/Map-main/src/AnimationController.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/utility.h:
 
@@ -5819,8 +5667,6 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/strin
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iosfwd:
 
-C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Algorithms.cpp:
-
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iterator:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDockWidget:
@@ -5834,6 +5680,8 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/numeric:
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/optional:
+
+C:/Users/HP/Downloads/Map-main/Map-main/src/NodeItem.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/locale.h:
 
@@ -5867,6 +5715,8 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/gamma
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/riemann_zeta.tcc:
 
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/special_function_util.h:
+
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tuple:
@@ -5897,6 +5747,10 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_mac.h:
 
+C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/corecrt_stdio_config.h:
+
+C:/Users/HP/Downloads/Map-main/Map-main/src/EdgeItem.cpp:
+
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/corecrt_wstdlib.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsitem.h:
@@ -5915,13 +5769,9 @@ C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/pthread_unistd.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h:
 
-C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/OsmLoader.cpp:
-
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sec_api/string_s.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h:
-
-C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/EdgeItem.cpp:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/signal.h:
 
@@ -5929,35 +5779,43 @@ C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/stdio.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/string.h:
 
-C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/EdgeItem.h:
-
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sys/timeb.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h:
 
+C:/Users/HP/Downloads/Map-main/Map-main/CMakeLists.txt:
+
 CMakeFiles/3.30.5/CMakeRCCompiler.cmake:
 
 CMakeFiles/3.30.5/CMakeSystem.cmake:
 
-C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/Algorithms.h:
+C:/Users/HP/Downloads/Map-main/Map-main/src/Algorithms.cpp:
 
-C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/AnimationController.cpp:
+C:/Users/HP/Downloads/Map-main/Map-main/src/CoordinateTransformer.h:
 
-C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/AnimationController.h:
+C:/Users/HP/Downloads/Map-main/Map-main/src/Graph.h:
 
-C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/CoordinateTransformer.h:
+C:/Users/HP/Downloads/Map-main/Map-main/src/MainWindow.cpp:
 
-C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/MainWindow.h:
+C:/Users/HP/Downloads/Map-main/Map-main/src/MainWindow.h:
 
-C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/NodeItem.cpp:
+C:/Users/HP/Downloads/Map-main/Map-main/src/NodeItem.cpp:
 
-C:/code/map/PathfindingVisualizer_Qt6_C++\ (1)/src/OsmLoader.h:
+C:/Users/HP/Downloads/Map-main/Map-main/src/OsmLoader.cpp:
+
+C:/Users/HP/Downloads/Map-main/Map-main/src/OsmLoader.h:
+
+C:/Users/HP/Downloads/Map-main/Map-main/src/main.cpp:
 
 PathfindingVisualizer_autogen/mocs_compilation.cpp:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qtmocconstants.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtCore/qtmochelpers.h:
+
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/_mingw_stdarg.h:
 
@@ -5966,6 +5824,8 @@ C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/stdlib.h:
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/limits.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/malloc.h:
+
+C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h:
 
 C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/stdarg.h:
 
@@ -5989,6 +5849,18 @@ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QToolTip:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicssceneevent.h:
 
+C:/Qt/6.11.1/mingw_64/include/QtWidgets/qfiledialog.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtCore/QEvent:
+
+C:/Qt/6.11.1/mingw_64/include/QtCore/QList:
+
+C:/Qt/6.11.1/mingw_64/include/QtCore/QRect:
+
+C:/Qt/6.11.1/mingw_64/include/QtCore/QSignalBlocker:
+
+C:/Qt/6.11.1/mingw_64/include/QtCore/qcoreapplication.h:
+
 C:/Qt/6.11.1/mingw_64/include/QtCore/qdir.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/qdirlisting.h:
@@ -5996,6 +5868,16 @@ C:/Qt/6.11.1/mingw_64/include/QtCore/qdirlisting.h:
 C:/Qt/6.11.1/mingw_64/include/QtCore/qelapsedtimer.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtGui/QBrush:
+
+C:/Qt/6.11.1/mingw_64/include/QtGui/QShortcut:
+
+C:/Qt/6.11.1/mingw_64/include/QtGui/qinputmethod.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtGui/qpointingdevice.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtGui/qshortcut.h:
+
+C:/Qt/6.11.1/mingw_64/include/QtGui/qvectornd.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsEllipseItem:
 
@@ -6008,8 +5890,6 @@ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMessageBox:
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/QVBoxLayout:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h:
-
-C:/Qt/6.11.1/mingw_64/include/QtWidgets/qfiledialog.h:
 
 C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h:
 
@@ -6035,12 +5915,10 @@ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/loca
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc:
 
+C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc:
+
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cwctype:
 
 C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/filesystem:
 
 C:/Qt/6.11.1/mingw_64/include/QtCore/QFile:
-
-C:/Qt/6.11.1/mingw_64/include/QtCore/qcoreapplication.h:
-
-C:/Qt/6.11.1/mingw_64/include/QtGui/qinputmethod.h:

@@ -10,23 +10,10 @@ void AnimationController::setSteps(const std::vector<PathfindingStep> &steps, in
     m_speed = msSpeed;
     m_currentIdx = 0;
     
-    // Resolve final path structure prior to starting animation
+    // The algorithms provide the OSM edge IDs in their final PathFound step.
     m_shortestPathEdges.clear();
     if (!m_steps.empty() && m_steps.back().type == PathfindingStep::Type::PathFound) {
-        const auto &lastStep = m_steps.back();
-        QString current = lastStep.currentNodeId;
-        
-        // Loop back up parents
-        while (!current.isEmpty()) {
-            QString parent = lastStep.parentMap.value(current);
-            if (parent.isEmpty()) break;
-            
-            // Generate a simple key for shortest edge tracing
-            m_shortestPathEdges.insert(current + "_" + parent);
-            m_shortestPathEdges.insert(parent + "_" + current);
-            
-            current = parent;
-        }
+        m_shortestPathEdges = m_steps.back().finalPathEdges;
     }
 }
 
@@ -73,16 +60,12 @@ void AnimationController::processNextStep() {
     // Supplement C++ step index
     step.stepIndex = static_cast<int>(m_currentIdx);
 
-    // Map shortest path lines into the rendering step
-    QSet<QString> stepPathEdges;
-    QString node = step.currentNodeId;
-    
     // If we've finished, overlay full optimal lines
     if (step.type == PathfindingStep::Type::PathFound || m_currentIdx == m_steps.size() - 1) {
-        stepPathEdges = m_shortestPathEdges;
+        step.finalPathEdges = m_shortestPathEdges;
+    } else {
+        step.finalPathEdges.clear();
     }
-
-    step.finalPathEdges = stepPathEdges;
 
     emit stepRendered(step);
     m_currentIdx++;

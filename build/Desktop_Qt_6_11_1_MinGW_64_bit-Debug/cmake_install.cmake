@@ -1,4 +1,4 @@
-# Install script for directory: C:/code/map/PathfindingVisualizer_Qt6_C++ (1)
+# Install script for directory: C:/Users/HP/Downloads/Map-main/Map-main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -52,6 +52,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "C:/code/map/PathfindingVisualizer_Qt6_C++ (1)/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/HP/Downloads/Map-main/Map-main/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

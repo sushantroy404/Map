@@ -5,6 +5,7 @@
 #include "EdgeItem.h"
 #include <QVBoxLayout>
 #include <QHBoxLayout>
+#include <QGridLayout>
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QToolBar>
@@ -15,10 +16,16 @@
 #include <QPainter>
 #include <QElapsedTimer>
 #include <QDockWidget>
+#include <QEvent>
+#include <QShortcut>
+#include <QWheelEvent>
+#include <QMouseEvent>
+#include <QSignalBlocker>
+#include <limits>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), m_animationController(new AnimationController(this)) {
-    
+
     // Core Layout initialization
     createActions();
     createMenus();
@@ -26,9 +33,9 @@ MainWindow::MainWindow(QWidget *parent)
     createLeftPanel();
     createCenterCanvas();
     createRightPanel();
-    
+
     setupConnections();
-    
+
     // Set central spacing and styling
     setStyleSheet(
         "QMainWindow { background-color: #F5F5F5; }"
@@ -44,7 +51,7 @@ MainWindow::MainWindow(QWidget *parent)
         "QComboBox QAbstractItemView { background-color: #FFFFFF; color: #222222; selection-background-color: #2E6DA4; selection-color: #FFFFFF; border: 1px solid #D8D8D8; }"
         "QSlider::groove:horizontal { border: 1px solid #D8D8D8; height: 6px; background: #FFFFFF; border-radius: 3px; }"
         "QSlider::handle:horizontal { background: #2E6DA4; width: 14px; margin: -4px 0; border-radius: 7px; }"
-    );
+        );
 }
 
 void MainWindow::createLeftPanel() {
@@ -57,17 +64,28 @@ void MainWindow::createLeftPanel() {
     QWidget *configGroup = new QWidget(this);
     QVBoxLayout *configLayout = new QVBoxLayout(configGroup);
     configLayout->setContentsMargins(0, 0, 0, 0);
-    
+
     QLabel *lblAlgo = new QLabel("Algorithm:", this);
     m_algoCombo = new QComboBox(this);
     m_algoCombo->addItems({"Dijkstra", "A* (Distance Heuristic)", "Breadth First Search (BFS)"});
 
-    QLabel *lblStart = new QLabel("Start Node Intersections:", this);
-    m_startNodeCombo = new QComboBox(this);
-    
-    QLabel *lblEnd = new QLabel("End Node Intersections:", this);
-    m_endNodeCombo = new QComboBox(this);
+    m_selectionHint = new QLabel(
+        "Click “Pick Start”, then click an intersection on the map.",
+        this
+        );
 
+    m_pickStartBtn = new QPushButton("Pick Start", this);
+    m_pickEndBtn = new QPushButton("Pick Destination", this);
+    QLabel *lblStart = new QLabel("Start intersection:", this);
+    QLabel *lblEnd = new QLabel("Destination intersection:", this);
+    m_startNodeCombo = new QComboBox(this);
+    m_endNodeCombo = new QComboBox(this);
+    m_startNodeCombo->setEnabled(false);
+    m_endNodeCombo->setEnabled(false);
+
+    configLayout->addWidget(m_selectionHint);
+    configLayout->addWidget(m_pickStartBtn);
+    configLayout->addWidget(m_pickEndBtn);
     configLayout->addWidget(lblAlgo);
     configLayout->addWidget(m_algoCombo);
     configLayout->addWidget(lblStart);
@@ -82,7 +100,6 @@ void MainWindow::createLeftPanel() {
     grid->setContentsMargins(0, 0, 0, 0);
     grid->setSpacing(6);
 
-    m_importBtn = new QPushButton("Import OSM", this);
     m_runBtn = new QPushButton("Run Search", this);
     m_pauseBtn = new QPushButton("Pause", this);
     m_resumeBtn = new QPushButton("Resume", this);
@@ -92,7 +109,6 @@ void MainWindow::createLeftPanel() {
     m_runBtn->setStyleSheet("QPushButton { background-color: #2E6DA4; color: white; border-color: #204D74; font-weight: bold; }"
                             "QPushButton:hover { background-color: #337AB7; }");
 
-    grid->addWidget(m_importBtn, 0, 0, 1, 2);
     grid->addWidget(m_runBtn, 1, 0, 1, 2);
     grid->addWidget(m_pauseBtn, 2, 0);
     grid->addWidget(m_resumeBtn, 2, 1);
@@ -106,7 +122,7 @@ void MainWindow::createLeftPanel() {
     speedLayout->setContentsMargins(0, 0, 0, 0);
     QLabel *lblSpeed = new QLabel("Simulation Speed (ms per step):", this);
     m_speedSlider = new QSlider(Qt::Horizontal, this);
-    m_speedSlider->setRange(10, 1000);
+    m_speedSlider->setRange(1, 100);
     m_speedSlider->setValue(100);
     speedLayout->addWidget(lblSpeed);
     speedLayout->addWidget(m_speedSlider);
@@ -120,11 +136,11 @@ void MainWindow::createLeftPanel() {
     statGroup->setStyleSheet(
         "QWidget#statGroup { background-color: #FFFFFF; border: 1px solid #D8D8D8; border-radius: 4px; }"
         "QWidget#statGroup QLabel { border: none; background: transparent; color: #222222; }"
-    );
-    
+        );
+
     QLabel *lblStatsTitle = new QLabel("ALGORITHM METRICS", this);
     lblStatsTitle->setStyleSheet("font-weight: bold; color: #2E6DA4;");
-    
+
     m_statAlgo = new QLabel("Active: None", this);
     m_statCurrNode = new QLabel("Current Node: --", this);
     m_statVisited = new QLabel("Visited Nodes: 0", this);
@@ -140,7 +156,7 @@ void MainWindow::createLeftPanel() {
     layout->addWidget(statGroup);
 
     layout->addStretch();
-    
+
     // Add dockable panel
     QDockWidget *leftDock = new QDockWidget("Controls", this);
     leftDock->setWidget(leftContainer);
@@ -152,13 +168,14 @@ void MainWindow::createLeftPanel() {
 void MainWindow::createCenterCanvas() {
     m_scene = new QGraphicsScene(this);
     m_scene->setBackgroundBrush(QBrush(QColor("#FFFFFF")));
-    
+
     m_view = new QGraphicsView(m_scene, this);
     m_view->setRenderHint(QPainter::Antialiasing, true);
     m_view->setRenderHint(QPainter::TextAntialiasing, true);
     m_view->setDragMode(QGraphicsView::ScrollHandDrag); // Drag to Pan
     m_view->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
-    
+    m_view->viewport()->installEventFilter(this);
+
     setCentralWidget(m_view);
 }
 
@@ -203,22 +220,32 @@ void MainWindow::createRightPanel() {
 }
 
 void MainWindow::setupConnections() {
-    connect(m_importBtn, &QPushButton::clicked, this, &MainWindow::handleImportOsm);
     connect(m_runBtn, &QPushButton::clicked, this, &MainWindow::handleRunAlgorithm);
     connect(m_pauseBtn, &QPushButton::clicked, this, &MainWindow::handlePauseAlgorithm);
     connect(m_resumeBtn, &QPushButton::clicked, this, &MainWindow::handleResumeAlgorithm);
     connect(m_resetBtn, &QPushButton::clicked, this, &MainWindow::handleReset);
     connect(m_clearBtn, &QPushButton::clicked, this, &MainWindow::handleClearPath);
     connect(m_speedSlider, &QSlider::valueChanged, this, &MainWindow::handleSpeedChanged);
+    connect(m_startNodeCombo, qOverload<int>(&QComboBox::currentIndexChanged),
+            this, &MainWindow::handleStartNodeChanged);
+    connect(m_endNodeCombo, qOverload<int>(&QComboBox::currentIndexChanged),
+            this, &MainWindow::handleEndNodeChanged);
 
     connect(m_animationController, &AnimationController::stepRendered, this, &MainWindow::updateUiForStep);
-    
+
+    auto *zoomInShortcut = new QShortcut(QKeySequence::ZoomIn, this);
+    connect(zoomInShortcut, &QShortcut::activated, this, &MainWindow::handleZoomIn);
+
+    auto *zoomOutShortcut = new QShortcut(QKeySequence::ZoomOut, this);
+    connect(zoomOutShortcut, &QShortcut::activated, this, &MainWindow::handleZoomOut);
+
     // Dropdown synchronization
-    connect(m_startNodeCombo, &QComboBox::currentIndexChanged, [this](int idx){
-        if (idx >= 0) m_selectedStartNodeId = m_startNodeCombo->itemData(idx).toString();
+    connect(m_pickStartBtn, &QPushButton::clicked, this, [this] {
+        setSelectionTarget(SelectionTarget::Start);
     });
-    connect(m_endNodeCombo, &QComboBox::currentIndexChanged, [this](int idx){
-        if (idx >= 0) m_selectedEndNodeId = m_endNodeCombo->itemData(idx).toString();
+
+    connect(m_pickEndBtn, &QPushButton::clicked, this, [this] {
+        setSelectionTarget(SelectionTarget::End);
     });
 }
 
@@ -273,7 +300,7 @@ void MainWindow::handleImportOsm() {
 
 void MainWindow::loadGraphIntoScene() {
     m_scene->clear();
-    
+
     // 1. Render all road Edges
     for (const Edge &edge : m_graph.getEdges()) {
         const Node &sourceNode = m_graph.getNode(edge.sourceId);
@@ -284,10 +311,11 @@ void MainWindow::loadGraphIntoScene() {
     }
 
     // 2. Render all intersection Nodes
+    QSignalBlocker startBlocker(m_startNodeCombo);
+    QSignalBlocker endBlocker(m_endNodeCombo);
     m_startNodeCombo->clear();
     m_endNodeCombo->clear();
 
-    int idx = 0;
     for (const Node &node : m_graph.getNodes()) {
         QString id = node.id;
         NodeItem *item = new NodeItem(node);
@@ -297,17 +325,29 @@ void MainWindow::loadGraphIntoScene() {
         m_startNodeCombo->addItem(comboLabel, id);
         m_endNodeCombo->addItem(comboLabel, id);
 
-        // Pre-select 1st and last elements as defaults
-        if (idx == 0) m_selectedStartNodeId = id;
-        idx++;
     }
+
+    m_startNodeCombo->setEnabled(m_startNodeCombo->count() > 0);
+    m_endNodeCombo->setEnabled(m_endNodeCombo->count() > 1);
 
     if (m_startNodeCombo->count() > 0) {
         m_startNodeCombo->setCurrentIndex(0);
-        m_endNodeCombo->setCurrentIndex(m_endNodeCombo->count() - 1);
-        m_selectedEndNodeId = m_endNodeCombo->itemData(m_endNodeCombo->count() - 1).toString();
+        m_selectedStartNodeId = m_startNodeCombo->currentData().toString();
+    } else {
+        m_selectedStartNodeId.clear();
     }
 
+    if (m_endNodeCombo->count() > 1) {
+        m_endNodeCombo->setCurrentIndex(1);
+        m_selectedEndNodeId = m_endNodeCombo->currentData().toString();
+        m_selectionHint->setText("Start and destination selected. Choose an algorithm and click Run Search.");
+    } else {
+        m_endNodeCombo->setCurrentIndex(-1);
+        m_selectedEndNodeId.clear();
+        setSelectionTarget(SelectionTarget::Start);
+    }
+
+    refreshSelectionMarkers();
     handleFitView();
 }
 
@@ -327,7 +367,7 @@ void MainWindow::handleRunAlgorithm() {
     }
 
     m_statAlgo->setText("Active: " + m_algoCombo->currentText());
-    
+
     // Clear graphics highlighting prior to launching
     handleClearPath();
 
@@ -387,7 +427,37 @@ void MainWindow::handleZoomOut() {
 }
 
 void MainWindow::handleFitView() {
-    m_view->fitInView(m_scene->itemsBoundingRect(), Qt::KeepAspectRatio);
+    const QRectF bounds = m_scene->itemsBoundingRect();
+    if (!bounds.isEmpty()) {
+        m_view->fitInView(bounds, Qt::KeepAspectRatio);
+    }
+}
+
+bool MainWindow::eventFilter(QObject *watched, QEvent *event) {
+    if (watched == m_view->viewport() && event->type() == QEvent::MouseButtonPress) {
+        auto *mouseEvent = static_cast<QMouseEvent *>(event);
+        if (mouseEvent->button() == Qt::LeftButton) {
+            const QPointF scenePos = m_view->mapToScene(mouseEvent->position().toPoint());
+            QGraphicsItem *clickedItem = m_scene->itemAt(scenePos, m_view->transform());
+            if (auto *nodeItem = dynamic_cast<NodeItem *>(clickedItem)) {
+                selectNodeFromMap(nodeItem->getNodeId());
+                return true;
+            }
+        }
+    }
+
+    if (watched == m_view->viewport() && event->type() == QEvent::Wheel) {
+        auto *wheelEvent = static_cast<QWheelEvent*>(event);
+
+        if (wheelEvent->angleDelta().y() > 0) {
+            handleZoomIn();
+        } else if (wheelEvent->angleDelta().y() < 0) {
+            handleZoomOut();
+        }
+
+        return true;
+    }
+    return QMainWindow::eventFilter(watched, event);
 }
 
 void MainWindow::handleExportScreenshot() {
@@ -405,16 +475,6 @@ void MainWindow::handleSaveProject() {
 
 void MainWindow::handleOpenProject() {
     QMessageBox::information(this, "Open Project", "Ready to parse and import serialized visualizer files.");
-}
-
-void MainWindow::handleNodeSelected(const QString &nodeId, bool isStart) {
-    if (isStart) {
-        int idx = m_startNodeCombo->findData(nodeId);
-        if (idx >= 0) m_startNodeCombo->setCurrentIndex(idx);
-    } else {
-        int idx = m_endNodeCombo->findData(nodeId);
-        if (idx >= 0) m_endNodeCombo->setCurrentIndex(idx);
-    }
 }
 
 void MainWindow::updateUiForStep(const PathfindingStep &step) {
@@ -473,5 +533,108 @@ void MainWindow::updateUiForStep(const PathfindingStep &step) {
     } else if (step.type == PathfindingStep::Type::NoPath) {
         m_statDistance->setText("Unreachable");
         QMessageBox::warning(this, "No Path Found", "No connection could be resolved between the chosen points.");
+    }
+}
+
+void MainWindow::setSelectionTarget(SelectionTarget target) {
+    m_selectionTarget = target;
+
+    if (target == SelectionTarget::Start) {
+        m_selectionHint->setText("Click an intersection on the map to choose the start.");
+    } else {
+        m_selectionHint->setText("Click an intersection on the map to choose the destination.");
+    }
+}
+
+void MainWindow::selectNodeFromMap(const QString &nodeId) {
+    m_animationController->stop();
+    handleClearPath();
+
+    if (m_selectionTarget == SelectionTarget::Start) {
+        m_selectedStartNodeId = nodeId;
+        const QSignalBlocker blocker(m_startNodeCombo);
+        m_startNodeCombo->setCurrentIndex(m_startNodeCombo->findData(nodeId));
+        setSelectionTarget(SelectionTarget::End);
+    } else {
+        if (nodeId == m_selectedStartNodeId) {
+            QMessageBox::warning(
+                this,
+                "Invalid destination",
+                "Choose a different intersection for the destination."
+                );
+            return;
+        }
+
+        m_selectedEndNodeId = nodeId;
+        const QSignalBlocker blocker(m_endNodeCombo);
+        m_endNodeCombo->setCurrentIndex(m_endNodeCombo->findData(nodeId));
+        m_selectionHint->setText(
+            "Start and destination selected. Choose an algorithm and click Run Search."
+            );
+    }
+
+    refreshSelectionMarkers();
+}
+
+void MainWindow::handleStartNodeChanged(int index) {
+    if (index < 0) {
+        return;
+    }
+
+    const QString nodeId = m_startNodeCombo->itemData(index).toString();
+    if (nodeId.isEmpty() || nodeId == m_selectedStartNodeId) {
+        return;
+    }
+
+    m_animationController->stop();
+    handleClearPath();
+    m_selectedStartNodeId = nodeId;
+    if (m_selectedStartNodeId == m_selectedEndNodeId) {
+        m_selectedEndNodeId.clear();
+        const QSignalBlocker blocker(m_endNodeCombo);
+        m_endNodeCombo->setCurrentIndex(-1);
+    }
+    setSelectionTarget(SelectionTarget::End);
+    refreshSelectionMarkers();
+}
+
+void MainWindow::handleEndNodeChanged(int index) {
+    if (index < 0) {
+        return;
+    }
+
+    const QString nodeId = m_endNodeCombo->itemData(index).toString();
+    if (nodeId.isEmpty() || nodeId == m_selectedEndNodeId) {
+        return;
+    }
+    if (nodeId == m_selectedStartNodeId) {
+        QMessageBox::warning(this, "Invalid destination", "Choose a different intersection for the destination.");
+        const QSignalBlocker blocker(m_endNodeCombo);
+        m_endNodeCombo->setCurrentIndex(-1);
+        m_selectedEndNodeId.clear();
+        return;
+    }
+
+    m_animationController->stop();
+    handleClearPath();
+    m_selectedEndNodeId = nodeId;
+    m_selectionHint->setText("Start and destination selected. Choose an algorithm and click Run Search.");
+    refreshSelectionMarkers();
+}
+
+void MainWindow::refreshSelectionMarkers() {
+    for (QGraphicsItem *item : m_scene->items()) {
+        auto *nodeItem = dynamic_cast<NodeItem *>(item);
+        if (!nodeItem) {
+            continue;
+        }
+
+        if (nodeItem->getNodeId() == m_selectedStartNodeId) {
+            nodeItem->setVisualState(NodeItem::State::Start);
+        } else if (nodeItem->getNodeId() == m_selectedEndNodeId) {
+            nodeItem->setVisualState(NodeItem::State::End);
+        } else {
+            nodeItem->setVisualState(NodeItem::State::Default);
+        }
     }
 }

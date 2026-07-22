@@ -1,6 +1,6 @@
 CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.obj: \
- C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (5)\src\NodeItem.cpp \
- C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (5)\src\NodeItem.h \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (8)\src\NodeItem.cpp \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (8)\src\NodeItem.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsEllipseItem \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsitem.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -376,7 +376,7 @@ CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qpen.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qbrush.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/QBrush \
- C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (5)\src\Graph.h \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (8)\src\Graph.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QPointF \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QMap \
@@ -417,7 +417,7 @@ CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMenu \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmenu.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/QAction \
- C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (5)\src\MainWindow.h \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (8)\src\MainWindow.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMainWindow \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmainwindow.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtabwidget.h \
@@ -457,9 +457,20 @@ CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtreewidget.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtreeview.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtreewidgetitemiterator.h \
- C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (5)\src\AnimationController.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDockWidget \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdockwidget.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QHBoxLayout \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qboxlayout.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayout.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayoutitem.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QButtonGroup \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qbuttongroup.h \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGroupBox \
+ C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgroupbox.h \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (8)\src\AnimationController.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QObject \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QTimer \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtimer.h \
- C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (5)\src\Algorithms.h \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (8)\src\Algorithms.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QSet

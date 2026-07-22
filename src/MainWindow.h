@@ -10,6 +10,10 @@
 #include <QTableWidget>
 #include <QListWidget>
 #include <QTreeWidget>
+#include <QDockWidget>
+#include <QHBoxLayout>
+#include <QButtonGroup>
+#include <QGroupBox>
 #include "Graph.h"
 #include "AnimationController.h"
 
@@ -35,6 +39,8 @@ private slots:
     void handleExportScreenshot();
     void handleSaveProject();
     void handleOpenProject();
+    void handleToggleRightPanel();
+    void handleComparisonModeToggled(bool enabled);
     
     // Animation callbacks
     void updateUiForStep(const PathfindingStep &step);
@@ -74,10 +80,22 @@ private:
     QLabel *m_statTime;
 
     // UI elements - Center Viewport
+    QWidget *m_centralContainer;
+    QHBoxLayout *m_centralLayout;
     QGraphicsView *m_view;
     QGraphicsScene *m_scene;
 
-    // UI elements - Right Information Panels
+    // Comparison Mode Multi-Views
+    QGraphicsView *m_viewDijkstra;
+    QGraphicsView *m_viewAStar;
+    QGraphicsView *m_viewBFS;
+    QGraphicsScene *m_sceneDijkstra;
+    QGraphicsScene *m_sceneAStar;
+    QGraphicsScene *m_sceneBFS;
+
+    // UI elements - Right Information Panels (Docked)
+    QDockWidget *m_rightDock;
+    QPushButton *m_toggleRightBtn; // Reference to sync toggle button text
     QListWidget *m_priorityQueueList;
     QTableWidget *m_distanceTable;
     QListWidget *m_logWidget;
@@ -86,4 +104,5 @@ private:
     // ID lookup maps
     QString m_selectedStartNodeId;
     QString m_selectedEndNodeId;
+    bool m_isComparisonMode;
 };

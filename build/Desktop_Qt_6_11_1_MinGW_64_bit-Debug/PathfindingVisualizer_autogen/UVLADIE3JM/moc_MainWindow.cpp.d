@@ -1,5 +1,5 @@
-C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (5)/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/PathfindingVisualizer_autogen/UVLADIE3JM/moc_MainWindow.cpp: C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (5)/src/MainWindow.h \
-  C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (5)/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/PathfindingVisualizer_autogen/moc_predefs.h \
+C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (8)/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/PathfindingVisualizer_autogen/UVLADIE3JM/moc_MainWindow.cpp: C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (8)/src/MainWindow.h \
+  C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (8)/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/PathfindingVisualizer_autogen/moc_predefs.h \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QMap \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QObject \
   C:/Qt/6.11.1/mingw_64/include/QtCore/QPointF \
@@ -179,9 +179,13 @@ C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (5)/build/Desktop_Qt_6_1
   C:/Qt/6.11.1/mingw_64/include/QtGui/qvalidator.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.11.1/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QButtonGroup \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QComboBox \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QDockWidget \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsScene \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsView \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGroupBox \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QHBoxLayout \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QLabel \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QListWidget \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMainWindow \
@@ -195,11 +199,18 @@ C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (5)/build/Desktop_Qt_6_1
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractslider.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qabstractspinbox.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qboxlayout.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qbuttongroup.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qcombobox.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qdockwidget.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsscene.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsview.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgridlayout.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgroupbox.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlabel.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayout.h \
+  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlayoutitem.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistview.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qlistwidget.h \
   C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmainwindow.h \
@@ -434,6 +445,6 @@ C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (5)/build/Desktop_Qt_6_1
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (5)/src/Algorithms.h \
-  C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (5)/src/AnimationController.h \
-  C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (5)/src/Graph.h
+  C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (8)/src/Algorithms.h \
+  C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (8)/src/AnimationController.h \
+  C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (8)/src/Graph.h

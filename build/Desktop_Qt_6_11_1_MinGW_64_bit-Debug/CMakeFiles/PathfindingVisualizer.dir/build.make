@@ -52,10 +52,10 @@ RM = C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)"
+CMAKE_SOURCE_DIR = "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug"
+CMAKE_BINARY_DIR = "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/PathfindingVisualizer.dir/depend.make
@@ -71,144 +71,144 @@ include CMakeFiles/PathfindingVisualizer.dir/flags.make
 PathfindingVisualizer_autogen/timestamp: C:/Qt/6.11.1/mingw_64/bin/moc.exe
 PathfindingVisualizer_autogen/timestamp: C:/Qt/6.11.1/mingw_64/bin/uic.exe
 PathfindingVisualizer_autogen/timestamp: CMakeFiles/PathfindingVisualizer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target PathfindingVisualizer"
-	C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen "C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++ (5)/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/PathfindingVisualizer_autogen.dir/AutogenInfo.json" Debug
-	C:\Qt\Tools\CMake_64\bin\cmake.exe -E touch "C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++ (5)/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/PathfindingVisualizer_autogen/timestamp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target PathfindingVisualizer"
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen "C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++ (8)/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/CMakeFiles/PathfindingVisualizer_autogen.dir/AutogenInfo.json" Debug
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E touch "C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++ (8)/build/Desktop_Qt_6_11_1_MinGW_64_bit-Debug/PathfindingVisualizer_autogen/timestamp"
 
 CMakeFiles/PathfindingVisualizer.dir/PathfindingVisualizer_autogen/mocs_compilation.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/flags.make
 CMakeFiles/PathfindingVisualizer.dir/PathfindingVisualizer_autogen/mocs_compilation.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/includes_CXX.rsp
 CMakeFiles/PathfindingVisualizer.dir/PathfindingVisualizer_autogen/mocs_compilation.cpp.obj: PathfindingVisualizer_autogen/mocs_compilation.cpp
 CMakeFiles/PathfindingVisualizer.dir/PathfindingVisualizer_autogen/mocs_compilation.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PathfindingVisualizer.dir/PathfindingVisualizer_autogen/mocs_compilation.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathfindingVisualizer.dir/PathfindingVisualizer_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\PathfindingVisualizer.dir\PathfindingVisualizer_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\PathfindingVisualizer.dir\PathfindingVisualizer_autogen\mocs_compilation.cpp.obj -c "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\PathfindingVisualizer_autogen\mocs_compilation.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PathfindingVisualizer.dir/PathfindingVisualizer_autogen/mocs_compilation.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathfindingVisualizer.dir/PathfindingVisualizer_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\PathfindingVisualizer.dir\PathfindingVisualizer_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\PathfindingVisualizer.dir\PathfindingVisualizer_autogen\mocs_compilation.cpp.obj -c "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\PathfindingVisualizer_autogen\mocs_compilation.cpp"
 
 CMakeFiles/PathfindingVisualizer.dir/PathfindingVisualizer_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PathfindingVisualizer.dir/PathfindingVisualizer_autogen/mocs_compilation.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\PathfindingVisualizer_autogen\mocs_compilation.cpp" > CMakeFiles\PathfindingVisualizer.dir\PathfindingVisualizer_autogen\mocs_compilation.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\PathfindingVisualizer_autogen\mocs_compilation.cpp" > CMakeFiles\PathfindingVisualizer.dir\PathfindingVisualizer_autogen\mocs_compilation.cpp.i
 
 CMakeFiles/PathfindingVisualizer.dir/PathfindingVisualizer_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PathfindingVisualizer.dir/PathfindingVisualizer_autogen/mocs_compilation.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\PathfindingVisualizer_autogen\mocs_compilation.cpp" -o CMakeFiles\PathfindingVisualizer.dir\PathfindingVisualizer_autogen\mocs_compilation.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\PathfindingVisualizer_autogen\mocs_compilation.cpp" -o CMakeFiles\PathfindingVisualizer.dir\PathfindingVisualizer_autogen\mocs_compilation.cpp.s
 
 CMakeFiles/PathfindingVisualizer.dir/src/main.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/flags.make
 CMakeFiles/PathfindingVisualizer.dir/src/main.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/includes_CXX.rsp
-CMakeFiles/PathfindingVisualizer.dir/src/main.cpp.obj: C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (5)/src/main.cpp
+CMakeFiles/PathfindingVisualizer.dir/src/main.cpp.obj: C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (8)/src/main.cpp
 CMakeFiles/PathfindingVisualizer.dir/src/main.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PathfindingVisualizer.dir/src/main.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathfindingVisualizer.dir/src/main.cpp.obj -MF CMakeFiles\PathfindingVisualizer.dir\src\main.cpp.obj.d -o CMakeFiles\PathfindingVisualizer.dir\src\main.cpp.obj -c "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PathfindingVisualizer.dir/src/main.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathfindingVisualizer.dir/src/main.cpp.obj -MF CMakeFiles\PathfindingVisualizer.dir\src\main.cpp.obj.d -o CMakeFiles\PathfindingVisualizer.dir\src\main.cpp.obj -c "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\main.cpp"
 
 CMakeFiles/PathfindingVisualizer.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PathfindingVisualizer.dir/src/main.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\main.cpp" > CMakeFiles\PathfindingVisualizer.dir\src\main.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\main.cpp" > CMakeFiles\PathfindingVisualizer.dir\src\main.cpp.i
 
 CMakeFiles/PathfindingVisualizer.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PathfindingVisualizer.dir/src/main.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\main.cpp" -o CMakeFiles\PathfindingVisualizer.dir\src\main.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\main.cpp" -o CMakeFiles\PathfindingVisualizer.dir\src\main.cpp.s
 
 CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/flags.make
 CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/includes_CXX.rsp
-CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj: C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (5)/src/MainWindow.cpp
+CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj: C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (8)/src/MainWindow.cpp
 CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj -MF CMakeFiles\PathfindingVisualizer.dir\src\MainWindow.cpp.obj.d -o CMakeFiles\PathfindingVisualizer.dir\src\MainWindow.cpp.obj -c "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\MainWindow.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj -MF CMakeFiles\PathfindingVisualizer.dir\src\MainWindow.cpp.obj.d -o CMakeFiles\PathfindingVisualizer.dir\src\MainWindow.cpp.obj -c "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\MainWindow.cpp"
 
 CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\MainWindow.cpp" > CMakeFiles\PathfindingVisualizer.dir\src\MainWindow.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\MainWindow.cpp" > CMakeFiles\PathfindingVisualizer.dir\src\MainWindow.cpp.i
 
 CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\MainWindow.cpp" -o CMakeFiles\PathfindingVisualizer.dir\src\MainWindow.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\MainWindow.cpp" -o CMakeFiles\PathfindingVisualizer.dir\src\MainWindow.cpp.s
 
 CMakeFiles/PathfindingVisualizer.dir/src/Graph.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/flags.make
 CMakeFiles/PathfindingVisualizer.dir/src/Graph.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/includes_CXX.rsp
-CMakeFiles/PathfindingVisualizer.dir/src/Graph.cpp.obj: C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (5)/src/Graph.cpp
+CMakeFiles/PathfindingVisualizer.dir/src/Graph.cpp.obj: C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (8)/src/Graph.cpp
 CMakeFiles/PathfindingVisualizer.dir/src/Graph.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PathfindingVisualizer.dir/src/Graph.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathfindingVisualizer.dir/src/Graph.cpp.obj -MF CMakeFiles\PathfindingVisualizer.dir\src\Graph.cpp.obj.d -o CMakeFiles\PathfindingVisualizer.dir\src\Graph.cpp.obj -c "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\Graph.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PathfindingVisualizer.dir/src/Graph.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathfindingVisualizer.dir/src/Graph.cpp.obj -MF CMakeFiles\PathfindingVisualizer.dir\src\Graph.cpp.obj.d -o CMakeFiles\PathfindingVisualizer.dir\src\Graph.cpp.obj -c "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\Graph.cpp"
 
 CMakeFiles/PathfindingVisualizer.dir/src/Graph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PathfindingVisualizer.dir/src/Graph.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\Graph.cpp" > CMakeFiles\PathfindingVisualizer.dir\src\Graph.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\Graph.cpp" > CMakeFiles\PathfindingVisualizer.dir\src\Graph.cpp.i
 
 CMakeFiles/PathfindingVisualizer.dir/src/Graph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PathfindingVisualizer.dir/src/Graph.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\Graph.cpp" -o CMakeFiles\PathfindingVisualizer.dir\src\Graph.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\Graph.cpp" -o CMakeFiles\PathfindingVisualizer.dir\src\Graph.cpp.s
 
 CMakeFiles/PathfindingVisualizer.dir/src/OsmLoader.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/flags.make
 CMakeFiles/PathfindingVisualizer.dir/src/OsmLoader.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/includes_CXX.rsp
-CMakeFiles/PathfindingVisualizer.dir/src/OsmLoader.cpp.obj: C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (5)/src/OsmLoader.cpp
+CMakeFiles/PathfindingVisualizer.dir/src/OsmLoader.cpp.obj: C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (8)/src/OsmLoader.cpp
 CMakeFiles/PathfindingVisualizer.dir/src/OsmLoader.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PathfindingVisualizer.dir/src/OsmLoader.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathfindingVisualizer.dir/src/OsmLoader.cpp.obj -MF CMakeFiles\PathfindingVisualizer.dir\src\OsmLoader.cpp.obj.d -o CMakeFiles\PathfindingVisualizer.dir\src\OsmLoader.cpp.obj -c "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\OsmLoader.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PathfindingVisualizer.dir/src/OsmLoader.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathfindingVisualizer.dir/src/OsmLoader.cpp.obj -MF CMakeFiles\PathfindingVisualizer.dir\src\OsmLoader.cpp.obj.d -o CMakeFiles\PathfindingVisualizer.dir\src\OsmLoader.cpp.obj -c "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\OsmLoader.cpp"
 
 CMakeFiles/PathfindingVisualizer.dir/src/OsmLoader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PathfindingVisualizer.dir/src/OsmLoader.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\OsmLoader.cpp" > CMakeFiles\PathfindingVisualizer.dir\src\OsmLoader.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\OsmLoader.cpp" > CMakeFiles\PathfindingVisualizer.dir\src\OsmLoader.cpp.i
 
 CMakeFiles/PathfindingVisualizer.dir/src/OsmLoader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PathfindingVisualizer.dir/src/OsmLoader.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\OsmLoader.cpp" -o CMakeFiles\PathfindingVisualizer.dir\src\OsmLoader.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\OsmLoader.cpp" -o CMakeFiles\PathfindingVisualizer.dir\src\OsmLoader.cpp.s
 
 CMakeFiles/PathfindingVisualizer.dir/src/Algorithms.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/flags.make
 CMakeFiles/PathfindingVisualizer.dir/src/Algorithms.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/includes_CXX.rsp
-CMakeFiles/PathfindingVisualizer.dir/src/Algorithms.cpp.obj: C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (5)/src/Algorithms.cpp
+CMakeFiles/PathfindingVisualizer.dir/src/Algorithms.cpp.obj: C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (8)/src/Algorithms.cpp
 CMakeFiles/PathfindingVisualizer.dir/src/Algorithms.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PathfindingVisualizer.dir/src/Algorithms.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathfindingVisualizer.dir/src/Algorithms.cpp.obj -MF CMakeFiles\PathfindingVisualizer.dir\src\Algorithms.cpp.obj.d -o CMakeFiles\PathfindingVisualizer.dir\src\Algorithms.cpp.obj -c "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\Algorithms.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PathfindingVisualizer.dir/src/Algorithms.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathfindingVisualizer.dir/src/Algorithms.cpp.obj -MF CMakeFiles\PathfindingVisualizer.dir\src\Algorithms.cpp.obj.d -o CMakeFiles\PathfindingVisualizer.dir\src\Algorithms.cpp.obj -c "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\Algorithms.cpp"
 
 CMakeFiles/PathfindingVisualizer.dir/src/Algorithms.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PathfindingVisualizer.dir/src/Algorithms.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\Algorithms.cpp" > CMakeFiles\PathfindingVisualizer.dir\src\Algorithms.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\Algorithms.cpp" > CMakeFiles\PathfindingVisualizer.dir\src\Algorithms.cpp.i
 
 CMakeFiles/PathfindingVisualizer.dir/src/Algorithms.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PathfindingVisualizer.dir/src/Algorithms.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\Algorithms.cpp" -o CMakeFiles\PathfindingVisualizer.dir\src\Algorithms.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\Algorithms.cpp" -o CMakeFiles\PathfindingVisualizer.dir\src\Algorithms.cpp.s
 
 CMakeFiles/PathfindingVisualizer.dir/src/AnimationController.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/flags.make
 CMakeFiles/PathfindingVisualizer.dir/src/AnimationController.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/includes_CXX.rsp
-CMakeFiles/PathfindingVisualizer.dir/src/AnimationController.cpp.obj: C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (5)/src/AnimationController.cpp
+CMakeFiles/PathfindingVisualizer.dir/src/AnimationController.cpp.obj: C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (8)/src/AnimationController.cpp
 CMakeFiles/PathfindingVisualizer.dir/src/AnimationController.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/PathfindingVisualizer.dir/src/AnimationController.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathfindingVisualizer.dir/src/AnimationController.cpp.obj -MF CMakeFiles\PathfindingVisualizer.dir\src\AnimationController.cpp.obj.d -o CMakeFiles\PathfindingVisualizer.dir\src\AnimationController.cpp.obj -c "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\AnimationController.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/PathfindingVisualizer.dir/src/AnimationController.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathfindingVisualizer.dir/src/AnimationController.cpp.obj -MF CMakeFiles\PathfindingVisualizer.dir\src\AnimationController.cpp.obj.d -o CMakeFiles\PathfindingVisualizer.dir\src\AnimationController.cpp.obj -c "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\AnimationController.cpp"
 
 CMakeFiles/PathfindingVisualizer.dir/src/AnimationController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PathfindingVisualizer.dir/src/AnimationController.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\AnimationController.cpp" > CMakeFiles\PathfindingVisualizer.dir\src\AnimationController.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\AnimationController.cpp" > CMakeFiles\PathfindingVisualizer.dir\src\AnimationController.cpp.i
 
 CMakeFiles/PathfindingVisualizer.dir/src/AnimationController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PathfindingVisualizer.dir/src/AnimationController.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\AnimationController.cpp" -o CMakeFiles\PathfindingVisualizer.dir\src\AnimationController.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\AnimationController.cpp" -o CMakeFiles\PathfindingVisualizer.dir\src\AnimationController.cpp.s
 
 CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/flags.make
 CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/includes_CXX.rsp
-CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.obj: C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (5)/src/NodeItem.cpp
+CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.obj: C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (8)/src/NodeItem.cpp
 CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.obj -MF CMakeFiles\PathfindingVisualizer.dir\src\NodeItem.cpp.obj.d -o CMakeFiles\PathfindingVisualizer.dir\src\NodeItem.cpp.obj -c "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\NodeItem.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.obj -MF CMakeFiles\PathfindingVisualizer.dir\src\NodeItem.cpp.obj.d -o CMakeFiles\PathfindingVisualizer.dir\src\NodeItem.cpp.obj -c "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\NodeItem.cpp"
 
 CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\NodeItem.cpp" > CMakeFiles\PathfindingVisualizer.dir\src\NodeItem.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\NodeItem.cpp" > CMakeFiles\PathfindingVisualizer.dir\src\NodeItem.cpp.i
 
 CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PathfindingVisualizer.dir/src/NodeItem.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\NodeItem.cpp" -o CMakeFiles\PathfindingVisualizer.dir\src\NodeItem.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\NodeItem.cpp" -o CMakeFiles\PathfindingVisualizer.dir\src\NodeItem.cpp.s
 
 CMakeFiles/PathfindingVisualizer.dir/src/EdgeItem.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/flags.make
 CMakeFiles/PathfindingVisualizer.dir/src/EdgeItem.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/includes_CXX.rsp
-CMakeFiles/PathfindingVisualizer.dir/src/EdgeItem.cpp.obj: C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (5)/src/EdgeItem.cpp
+CMakeFiles/PathfindingVisualizer.dir/src/EdgeItem.cpp.obj: C:/Users/Admin/Downloads/PathfindingVisualizer_Qt6_C++\ (8)/src/EdgeItem.cpp
 CMakeFiles/PathfindingVisualizer.dir/src/EdgeItem.cpp.obj: CMakeFiles/PathfindingVisualizer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PathfindingVisualizer.dir/src/EdgeItem.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathfindingVisualizer.dir/src/EdgeItem.cpp.obj -MF CMakeFiles\PathfindingVisualizer.dir\src\EdgeItem.cpp.obj.d -o CMakeFiles\PathfindingVisualizer.dir\src\EdgeItem.cpp.obj -c "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\EdgeItem.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PathfindingVisualizer.dir/src/EdgeItem.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PathfindingVisualizer.dir/src/EdgeItem.cpp.obj -MF CMakeFiles\PathfindingVisualizer.dir\src\EdgeItem.cpp.obj.d -o CMakeFiles\PathfindingVisualizer.dir\src\EdgeItem.cpp.obj -c "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\EdgeItem.cpp"
 
 CMakeFiles/PathfindingVisualizer.dir/src/EdgeItem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PathfindingVisualizer.dir/src/EdgeItem.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\EdgeItem.cpp" > CMakeFiles\PathfindingVisualizer.dir\src\EdgeItem.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\EdgeItem.cpp" > CMakeFiles\PathfindingVisualizer.dir\src\EdgeItem.cpp.i
 
 CMakeFiles/PathfindingVisualizer.dir/src/EdgeItem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PathfindingVisualizer.dir/src/EdgeItem.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\src\EdgeItem.cpp" -o CMakeFiles\PathfindingVisualizer.dir\src\EdgeItem.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\src\EdgeItem.cpp" -o CMakeFiles\PathfindingVisualizer.dir\src\EdgeItem.cpp.s
 
 # Object files for target PathfindingVisualizer
 PathfindingVisualizer_OBJECTS = \
@@ -243,7 +243,7 @@ PathfindingVisualizer.exe: C:/Qt/6.11.1/mingw_64/lib/libQt6EntryPoint.a
 PathfindingVisualizer.exe: CMakeFiles/PathfindingVisualizer.dir/linkLibs.rsp
 PathfindingVisualizer.exe: CMakeFiles/PathfindingVisualizer.dir/objects1.rsp
 PathfindingVisualizer.exe: CMakeFiles/PathfindingVisualizer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable PathfindingVisualizer.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable PathfindingVisualizer.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\PathfindingVisualizer.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -255,6 +255,6 @@ CMakeFiles/PathfindingVisualizer.dir/clean:
 .PHONY : CMakeFiles/PathfindingVisualizer.dir/clean
 
 CMakeFiles/PathfindingVisualizer.dir/depend: PathfindingVisualizer_autogen/timestamp
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)" "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)" "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug" "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug" "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (5)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles\PathfindingVisualizer.dir\DependInfo.cmake" "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)" "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)" "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug" "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug" "C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++ (8)\build\Desktop_Qt_6_11_1_MinGW_64_bit-Debug\CMakeFiles\PathfindingVisualizer.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/PathfindingVisualizer.dir/depend
 

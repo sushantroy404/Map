@@ -17,7 +17,7 @@
 #include <QDockWidget>
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), m_animationController(new AnimationController(this)) {
+    : QMainWindow(parent), m_animationController(new AnimationController(this)), m_rightDock(nullptr), m_toggleRightBtn(nullptr), m_isComparisonMode(false) {
     
     // Core Layout initialization
     createActions();
@@ -150,16 +150,52 @@ void MainWindow::createLeftPanel() {
 }
 
 void MainWindow::createCenterCanvas() {
+    m_centralContainer = new QWidget(this);
+    m_centralLayout = new QHBoxLayout(m_centralContainer);
+    m_centralLayout->setContentsMargins(0, 0, 0, 0);
+    m_centralLayout->setSpacing(6);
+
+    // Single view
     m_scene = new QGraphicsScene(this);
     m_scene->setBackgroundBrush(QBrush(QColor("#FFFFFF")));
-    
     m_view = new QGraphicsView(m_scene, this);
     m_view->setRenderHint(QPainter::Antialiasing, true);
     m_view->setRenderHint(QPainter::TextAntialiasing, true);
-    m_view->setDragMode(QGraphicsView::ScrollHandDrag); // Drag to Pan
+    m_view->setDragMode(QGraphicsView::ScrollHandDrag);
     m_view->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
-    
-    setCentralWidget(m_view);
+    m_centralLayout->addWidget(m_view);
+
+    // Comparison view 1: Dijkstra
+    m_sceneDijkstra = new QGraphicsScene(this);
+    m_sceneDijkstra->setBackgroundBrush(QBrush(QColor("#FFFFFF")));
+    m_viewDijkstra = new QGraphicsView(m_sceneDijkstra, this);
+    m_viewDijkstra->setRenderHint(QPainter::Antialiasing, true);
+    m_viewDijkstra->setDragMode(QGraphicsView::ScrollHandDrag);
+    m_viewDijkstra->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
+    m_viewDijkstra->hide();
+    m_centralLayout->addWidget(m_viewDijkstra);
+
+    // Comparison view 2: A*
+    m_sceneAStar = new QGraphicsScene(this);
+    m_sceneAStar->setBackgroundBrush(QBrush(QColor("#FFFFFF")));
+    m_viewAStar = new QGraphicsView(m_sceneAStar, this);
+    m_viewAStar->setRenderHint(QPainter::Antialiasing, true);
+    m_viewAStar->setDragMode(QGraphicsView::ScrollHandDrag);
+    m_viewAStar->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
+    m_viewAStar->hide();
+    m_centralLayout->addWidget(m_viewAStar);
+
+    // Comparison view 3: BFS
+    m_sceneBFS = new QGraphicsScene(this);
+    m_sceneBFS->setBackgroundBrush(QBrush(QColor("#FFFFFF")));
+    m_viewBFS = new QGraphicsView(m_sceneBFS, this);
+    m_viewBFS->setRenderHint(QPainter::Antialiasing, true);
+    m_viewBFS->setDragMode(QGraphicsView::ScrollHandDrag);
+    m_viewBFS->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
+    m_viewBFS->hide();
+    m_centralLayout->addWidget(m_viewBFS);
+
+    setCentralWidget(m_centralContainer);
 }
 
 void MainWindow::createRightPanel() {
@@ -195,11 +231,11 @@ void MainWindow::createRightPanel() {
     layout->addWidget(m_currentStepLabel);
     layout->addWidget(m_logWidget, 3);
 
-    QDockWidget *rightDock = new QDockWidget("Engine State Inspectors", this);
-    rightDock->setWidget(rightContainer);
-    rightDock->setAllowedAreas(Qt::RightDockWidgetArea);
-    rightDock->setFeatures(QDockWidget::DockWidgetMovable);
-    addDockWidget(Qt::RightDockWidgetArea, rightDock);
+    m_rightDock = new QDockWidget("Engine State Inspectors", this);
+    m_rightDock->setWidget(rightContainer);
+    m_rightDock->setAllowedAreas(Qt::RightDockWidgetArea);
+    m_rightDock->setFeatures(QDockWidget::DockWidgetMovable | QDockWidget::DockWidgetClosable);
+    addDockWidget(Qt::RightDockWidgetArea, m_rightDock);
 }
 
 void MainWindow::setupConnections() {
@@ -238,15 +274,36 @@ void MainWindow::createToolBar() {
     QPushButton *btnZoomOut = new QPushButton("Zoom Out", this);
     QPushButton *btnFit = new QPushButton("Fit View", this);
 
+    // Toggle button for right side panel
+    m_toggleRightBtn = new QPushButton("Collapse Panel", this);
+    m_toggleRightBtn->setToolTip("Toggle Right State Inspector Panel Visibility");
+
+    // Comparison Mode Option
+    QPushButton *btnSingleMode = new QPushButton("Single Solver", this);
+    QPushButton *btnCompareMode = new QPushButton("Compare All 3", this);
+    btnSingleMode->setCheckable(true);
+    btnCompareMode->setCheckable(true);
+    btnSingleMode->setChecked(true);
+
+    QButtonGroup *toolModeGroup = new QButtonGroup(this);
+    toolModeGroup->addButton(btnSingleMode);
+    toolModeGroup->addButton(btnCompareMode);
+    toolModeGroup->setExclusive(true);
+
     toolbar->addWidget(btnImport);
     toolbar->addWidget(btnOpen);
     toolbar->addWidget(btnSave);
+    toolbar->addSeparator();
+    toolbar->addWidget(btnSingleMode);
+    toolbar->addWidget(btnCompareMode);
     toolbar->addSeparator();
     toolbar->addWidget(btnZoomIn);
     toolbar->addWidget(btnZoomOut);
     toolbar->addWidget(btnFit);
     toolbar->addSeparator();
     toolbar->addWidget(btnScreenshot);
+    toolbar->addSeparator();
+    toolbar->addWidget(m_toggleRightBtn);
 
     connect(btnImport, &QPushButton::clicked, this, &MainWindow::handleImportOsm);
     connect(btnOpen, &QPushButton::clicked, this, &MainWindow::handleOpenProject);
@@ -255,6 +312,15 @@ void MainWindow::createToolBar() {
     connect(btnZoomOut, &QPushButton::clicked, this, &MainWindow::handleZoomOut);
     connect(btnFit, &QPushButton::clicked, this, &MainWindow::handleFitView);
     connect(btnScreenshot, &QPushButton::clicked, this, &MainWindow::handleExportScreenshot);
+
+    connect(m_toggleRightBtn, &QPushButton::clicked, this, &MainWindow::handleToggleRightPanel);
+
+    connect(btnSingleMode, &QPushButton::clicked, [this]() {
+        handleComparisonModeToggled(false);
+    });
+    connect(btnCompareMode, &QPushButton::clicked, [this]() {
+        handleComparisonModeToggled(true);
+    });
 }
 
 void MainWindow::handleImportOsm() {
@@ -273,14 +339,19 @@ void MainWindow::handleImportOsm() {
 
 void MainWindow::loadGraphIntoScene() {
     m_scene->clear();
+    m_sceneDijkstra->clear();
+    m_sceneAStar->clear();
+    m_sceneBFS->clear();
     
     // 1. Render all road Edges
     for (const Edge &edge : m_graph.getEdges()) {
         const Node &sourceNode = m_graph.getNode(edge.sourceId);
         const Node &targetNode = m_graph.getNode(edge.targetId);
 
-        EdgeItem *item = new EdgeItem(edge, sourceNode.screenPos, targetNode.screenPos);
-        m_scene->addItem(item);
+        m_scene->addItem(new EdgeItem(edge, sourceNode.screenPos, targetNode.screenPos));
+        m_sceneDijkstra->addItem(new EdgeItem(edge, sourceNode.screenPos, targetNode.screenPos));
+        m_sceneAStar->addItem(new EdgeItem(edge, sourceNode.screenPos, targetNode.screenPos));
+        m_sceneBFS->addItem(new EdgeItem(edge, sourceNode.screenPos, targetNode.screenPos));
     }
 
     // 2. Render all intersection Nodes
@@ -290,8 +361,10 @@ void MainWindow::loadGraphIntoScene() {
     int idx = 0;
     for (const Node &node : m_graph.getNodes()) {
         QString id = node.id;
-        NodeItem *item = new NodeItem(node);
-        m_scene->addItem(item);
+        m_scene->addItem(new NodeItem(node));
+        m_sceneDijkstra->addItem(new NodeItem(node));
+        m_sceneAStar->addItem(new NodeItem(node));
+        m_sceneBFS->addItem(new NodeItem(node));
 
         QString comboLabel = QString("Intersection %1 (Lat: %2, Lon: %3)").arg(id).arg(node.lat, 0, 'f', 4).arg(node.lon, 0, 'f', 4);
         m_startNodeCombo->addItem(comboLabel, id);
@@ -366,13 +439,21 @@ void MainWindow::handleClearPath() {
     m_statDistance->setText("Total distance: --");
     m_statDistance->setStyleSheet("");
 
-    for (QGraphicsItem *item : m_scene->items()) {
-        if (auto *nodeItem = dynamic_cast<NodeItem*>(item)) {
-            nodeItem->setVisualState(NodeItem::State::Default);
-        } else if (auto *edgeItem = dynamic_cast<EdgeItem*>(item)) {
-            edgeItem->setVisualState(EdgeItem::State::Default);
+    auto clearSceneState = [](QGraphicsScene *scene) {
+        if (!scene) return;
+        for (QGraphicsItem *item : scene->items()) {
+            if (auto *nodeItem = dynamic_cast<NodeItem*>(item)) {
+                nodeItem->setVisualState(NodeItem::State::Default);
+            } else if (auto *edgeItem = dynamic_cast<EdgeItem*>(item)) {
+                edgeItem->setVisualState(EdgeItem::State::Default);
+            }
         }
-    }
+    };
+
+    clearSceneState(m_scene);
+    clearSceneState(m_sceneDijkstra);
+    clearSceneState(m_sceneAStar);
+    clearSceneState(m_sceneBFS);
 }
 
 void MainWindow::handleSpeedChanged(int value) {
@@ -381,22 +462,39 @@ void MainWindow::handleSpeedChanged(int value) {
 
 void MainWindow::handleZoomIn() {
     m_view->scale(1.2, 1.2);
+    m_viewDijkstra->scale(1.2, 1.2);
+    m_viewAStar->scale(1.2, 1.2);
+    m_viewBFS->scale(1.2, 1.2);
 }
 
 void MainWindow::handleZoomOut() {
     m_view->scale(1.0 / 1.2, 1.0 / 1.2);
+    m_viewDijkstra->scale(1.0 / 1.2, 1.0 / 1.2);
+    m_viewAStar->scale(1.0 / 1.2, 1.0 / 1.2);
+    m_viewBFS->scale(1.0 / 1.2, 1.0 / 1.2);
 }
 
 void MainWindow::handleFitView() {
-    m_view->fitInView(m_scene->itemsBoundingRect(), Qt::KeepAspectRatio);
+    if (m_scene) m_view->fitInView(m_scene->itemsBoundingRect(), Qt::KeepAspectRatio);
+    if (m_sceneDijkstra) m_viewDijkstra->fitInView(m_sceneDijkstra->itemsBoundingRect(), Qt::KeepAspectRatio);
+    if (m_sceneAStar) m_viewAStar->fitInView(m_sceneAStar->itemsBoundingRect(), Qt::KeepAspectRatio);
+    if (m_sceneBFS) m_viewBFS->fitInView(m_sceneBFS->itemsBoundingRect(), Qt::KeepAspectRatio);
 }
 
 void MainWindow::handleExportScreenshot() {
     QString fileName = QFileDialog::getSaveFileName(this, "Save Screenshot", "", "PNG Image (*.png)");
     if (fileName.isEmpty()) return;
 
-    QPixmap pixmap(m_view->viewport()->size());
-    m_view->viewport()->render(&pixmap);
+    QGraphicsView *activeView = m_view;
+    if (m_isComparisonMode) {
+        int idx = m_algoCombo->currentIndex();
+        if (idx == 0) activeView = m_viewDijkstra;
+        else if (idx == 1) activeView = m_viewAStar;
+        else activeView = m_viewBFS;
+    }
+
+    QPixmap pixmap(activeView->viewport()->size());
+    activeView->viewport()->render(&pixmap);
     pixmap.save(fileName, "PNG");
 }
 
@@ -406,6 +504,39 @@ void MainWindow::handleSaveProject() {
 
 void MainWindow::handleOpenProject() {
     QMessageBox::information(this, "Open Project", "Ready to parse and import serialized visualizer files.");
+}
+
+void MainWindow::handleToggleRightPanel() {
+    if (!m_rightDock) return;
+    if (m_rightDock->isVisible()) {
+        m_rightDock->hide();
+        if (m_toggleRightBtn) {
+            m_toggleRightBtn->setText("Expand Panel");
+        }
+    } else {
+        m_rightDock->show();
+        if (m_toggleRightBtn) {
+            m_toggleRightBtn->setText("Collapse Panel");
+        }
+    }
+}
+
+void MainWindow::handleComparisonModeToggled(bool enabled) {
+    m_isComparisonMode = enabled;
+    handleReset(); // Stop active animation tracing
+
+    if (enabled) {
+        m_view->hide();
+        m_viewDijkstra->show();
+        m_viewAStar->show();
+        m_viewBFS->show();
+    } else {
+        m_view->show();
+        m_viewDijkstra->hide();
+        m_viewAStar->hide();
+        m_viewBFS->hide();
+    }
+    handleFitView();
 }
 
 void MainWindow::handleNodeSelected(const QString &nodeId, bool isStart) {
@@ -471,36 +602,48 @@ void MainWindow::updateUiForStep(const PathfindingStep &step) {
         }
     }
 
-    for (QGraphicsItem *item : m_scene->items()) {
-        if (auto *nodeItem = dynamic_cast<NodeItem*>(item)) {
-            QString id = nodeItem->getNodeId();
-            if (id == m_selectedStartNodeId) {
-                nodeItem->setVisualState(NodeItem::State::Start);
-            } else if (id == m_selectedEndNodeId) {
-                nodeItem->setVisualState(NodeItem::State::End);
-            } else if (midPathNodes.contains(id)) {
-                nodeItem->setVisualState(NodeItem::State::Default);
-            } else if (id == step.currentNodeId) {
-                nodeItem->setVisualState(NodeItem::State::Active);
-            } else if (step.visitedNodes.contains(id)) {
-                nodeItem->setVisualState(NodeItem::State::Visited);
-            } else {
-                nodeItem->setVisualState(NodeItem::State::Default);
-            }
-        } else if (auto *edgeItem = dynamic_cast<EdgeItem*>(item)) {
-            QString eId = edgeItem->getEdgeId();
-            QString sId = edgeItem->getSourceId();
-            QString tId = edgeItem->getTargetId();
-            QString key1 = sId + "_" + tId;
-            QString key2 = tId + "_" + sId;
-            if (step.finalPathEdges.contains(eId) || step.finalPathEdges.contains(key1) || step.finalPathEdges.contains(key2)) {
-                edgeItem->setVisualState(EdgeItem::State::ShortestPath);
-            } else if (step.activeEdgeId == eId) {
-                edgeItem->setVisualState(EdgeItem::State::Relaxed);
-            } else {
-                edgeItem->setVisualState(EdgeItem::State::Default);
+    auto highlightScene = [this, &step, &midPathNodes](QGraphicsScene *scene) {
+        if (!scene) return;
+        for (QGraphicsItem *item : scene->items()) {
+            if (auto *nodeItem = dynamic_cast<NodeItem*>(item)) {
+                QString id = nodeItem->getNodeId();
+                if (id == m_selectedStartNodeId) {
+                    nodeItem->setVisualState(NodeItem::State::Start);
+                } else if (id == m_selectedEndNodeId) {
+                    nodeItem->setVisualState(NodeItem::State::End);
+                } else if (midPathNodes.contains(id)) {
+                    nodeItem->setVisualState(NodeItem::State::Default);
+                } else if (id == step.currentNodeId) {
+                    nodeItem->setVisualState(NodeItem::State::Active);
+                } else if (step.visitedNodes.contains(id)) {
+                    nodeItem->setVisualState(NodeItem::State::Visited);
+                } else {
+                    nodeItem->setVisualState(NodeItem::State::Default);
+                }
+            } else if (auto *edgeItem = dynamic_cast<EdgeItem*>(item)) {
+                QString eId = edgeItem->getEdgeId();
+                QString sId = edgeItem->getSourceId();
+                QString tId = edgeItem->getTargetId();
+                QString key1 = sId + "_" + tId;
+                QString key2 = tId + "_" + sId;
+                if (step.finalPathEdges.contains(eId) || step.finalPathEdges.contains(key1) || step.finalPathEdges.contains(key2)) {
+                    edgeItem->setVisualState(EdgeItem::State::ShortestPath);
+                } else if (step.activeEdgeId == eId) {
+                    edgeItem->setVisualState(EdgeItem::State::Relaxed);
+                } else {
+                    edgeItem->setVisualState(EdgeItem::State::Default);
+                }
             }
         }
+    };
+
+    if (m_isComparisonMode) {
+        int idx = m_algoCombo->currentIndex();
+        if (idx == 0) highlightScene(m_sceneDijkstra);
+        else if (idx == 1) highlightScene(m_sceneAStar);
+        else highlightScene(m_sceneBFS);
+    } else {
+        highlightScene(m_scene);
     }
 
     if (step.type == PathfindingStep::Type::PathFound) {

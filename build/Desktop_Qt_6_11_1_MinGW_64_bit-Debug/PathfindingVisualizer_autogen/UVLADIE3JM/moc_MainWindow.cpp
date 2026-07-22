@@ -55,6 +55,9 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         "handleExportScreenshot",
         "handleSaveProject",
         "handleOpenProject",
+        "handleToggleRightPanel",
+        "handleComparisonModeToggled",
+        "enabled",
         "updateUiForStep",
         "PathfindingStep",
         "step"
@@ -89,9 +92,15 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         QtMocHelpers::SlotData<void()>(14, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'handleOpenProject'
         QtMocHelpers::SlotData<void()>(15, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'handleToggleRightPanel'
+        QtMocHelpers::SlotData<void()>(16, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'handleComparisonModeToggled'
+        QtMocHelpers::SlotData<void(bool)>(17, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Bool, 18 },
+        }}),
         // Slot 'updateUiForStep'
-        QtMocHelpers::SlotData<void(const PathfindingStep &)>(16, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { 0x80000000 | 17, 18 },
+        QtMocHelpers::SlotData<void(const PathfindingStep &)>(19, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 20, 21 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -129,7 +138,9 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 10: _t->handleExportScreenshot(); break;
         case 11: _t->handleSaveProject(); break;
         case 12: _t->handleOpenProject(); break;
-        case 13: _t->updateUiForStep((*reinterpret_cast<std::add_pointer_t<PathfindingStep>>(_a[1]))); break;
+        case 13: _t->handleToggleRightPanel(); break;
+        case 14: _t->handleComparisonModeToggled((*reinterpret_cast<std::add_pointer_t<bool>>(_a[1]))); break;
+        case 15: _t->updateUiForStep((*reinterpret_cast<std::add_pointer_t<PathfindingStep>>(_a[1]))); break;
         default: ;
         }
     }
@@ -154,14 +165,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 14)
+        if (_id < 16)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 14;
+        _id -= 16;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 14)
+        if (_id < 16)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 14;
+        _id -= 16;
     }
     return _id;
 }

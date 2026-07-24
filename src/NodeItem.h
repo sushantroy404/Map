@@ -21,6 +21,7 @@ public:
     ~NodeItem() = default;
 
     QString getNodeId() const { return m_node.id; }
+    State getVisualState() const { return m_state; }
     void setVisualState(State state);
 
 protected:

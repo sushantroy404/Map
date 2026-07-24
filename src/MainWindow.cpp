@@ -17,7 +17,8 @@
 #include <QDockWidget>
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), m_animationController(new AnimationController(this)), m_rightDock(nullptr), m_toggleRightBtn(nullptr), m_isComparisonMode(false) {
+    : QMainWindow(parent), m_animationController(new AnimationController(this)), m_rightDock(nullptr), m_toggleRightBtn(nullptr), m_isComparisonMode(false),
+      m_execTimeDijkstra(0.0), m_execTimeAStar(0.0), m_execTimeBFS(0.0), m_execTimeSingle(0.0) {
     
     // Core Layout initialization
     createActions();
@@ -36,14 +37,14 @@ MainWindow::MainWindow(QWidget *parent)
         "QLabel { color: #222222; font-size: 12px; }"
         "QDockWidget { color: #222222; font-weight: bold; }"
         "QDockWidget::title { background-color: #EBEBEB; padding: 6px; text-align: left; color: #222222; font-weight: bold; }"
-        "QGroupBox { font-weight: bold; border: 1px solid #D8D8D8; border-radius: 4px; margin-top: 10px; padding: 10px; color: #222222; }"
-        "QPushButton { background-color: #FFFFFF; border: 1px solid #C8C8C8; border-radius: 4px; padding: 5px 12px; color: #222222; }"
+        "QGroupBox { font-weight: bold; border: 1px solid #D8D8D8; border-radius: 0px; margin-top: 10px; padding: 10px; color: #222222; }"
+        "QPushButton { background-color: #FFFFFF; border: 1px solid #C8C8C8; border-radius: 0px; padding: 5px 12px; color: #222222; }"
         "QPushButton:hover { background-color: #D9ECFF; border-color: #2E6DA4; }"
         "QPushButton:pressed { background-color: #C0D9F0; }"
-        "QComboBox { background-color: #FFFFFF; border: 1px solid #C8C8C8; border-radius: 4px; padding: 4px; min-width: 150px; color: #222222; }"
+        "QComboBox { background-color: #FFFFFF; border: 1px solid #C8C8C8; border-radius: 0px; padding: 4px; min-width: 150px; color: #222222; }"
         "QComboBox QAbstractItemView { background-color: #FFFFFF; color: #222222; selection-background-color: #2E6DA4; selection-color: #FFFFFF; border: 1px solid #D8D8D8; }"
-        "QSlider::groove:horizontal { border: 1px solid #D8D8D8; height: 6px; background: #FFFFFF; border-radius: 3px; }"
-        "QSlider::handle:horizontal { background: #2E6DA4; width: 14px; margin: -4px 0; border-radius: 7px; }"
+        "QSlider::groove:horizontal { border: 1px solid #D8D8D8; height: 6px; background: #FFFFFF; border-radius: 0px; }"
+        "QSlider::handle:horizontal { background: #2E6DA4; width: 14px; margin: -4px 0; border-radius: 0px; }"
     );
 }
 
@@ -165,35 +166,132 @@ void MainWindow::createCenterCanvas() {
     m_view->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
     m_centralLayout->addWidget(m_view);
 
-    // Comparison view 1: Dijkstra
+    // Style for metric cards below each comparison map
+    QString cardStyle = "QWidget { background-color: #FFFFFF; border: 1px solid #D8D8D8; border-radius: 0px; }"
+                         "QLabel { font-size: 11px; color: #1E293B; }";
+
+    // --- Comparison view 1: Dijkstra ---
+    m_containerDijkstra = new QWidget(this);
+    QVBoxLayout *layoutD = new QVBoxLayout(m_containerDijkstra);
+    layoutD->setContentsMargins(0, 0, 0, 0);
+    layoutD->setSpacing(6);
+
+    QLabel *headerD = new QLabel("Dijkstra Algorithm", this);
+    headerD->setAlignment(Qt::AlignCenter);
+    headerD->setStyleSheet("font-weight: bold; font-size: 12px; color: #1E293B; background-color: transparent; padding: 6px; border: 1px solid #D8D8D8; border-radius: 0px;");
+
     m_sceneDijkstra = new QGraphicsScene(this);
     m_sceneDijkstra->setBackgroundBrush(QBrush(QColor("#FFFFFF")));
     m_viewDijkstra = new QGraphicsView(m_sceneDijkstra, this);
     m_viewDijkstra->setRenderHint(QPainter::Antialiasing, true);
     m_viewDijkstra->setDragMode(QGraphicsView::ScrollHandDrag);
     m_viewDijkstra->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
-    m_viewDijkstra->hide();
-    m_centralLayout->addWidget(m_viewDijkstra);
 
-    // Comparison view 2: A*
+    QWidget *cardD = new QWidget(this);
+    cardD->setStyleSheet(cardStyle);
+    QVBoxLayout *cardDLayout = new QVBoxLayout(cardD);
+    cardDLayout->setContentsMargins(10, 8, 10, 8);
+    cardDLayout->setSpacing(3);
+
+    QLabel *titleD = new QLabel("DIJKSTRA METRICS", this);
+    titleD->setStyleSheet("font-weight: bold; color: #1E40AF; font-size: 11px; margin-bottom: 2px;");
+    m_cardDijkstraTime = new QLabel("Execution Time: --", this);
+    m_cardDijkstraVisited = new QLabel("Visited Nodes: 0", this);
+    m_cardDijkstraDist = new QLabel("Path Distance: --", this);
+
+    cardDLayout->addWidget(titleD);
+    cardDLayout->addWidget(m_cardDijkstraTime);
+    cardDLayout->addWidget(m_cardDijkstraVisited);
+    cardDLayout->addWidget(m_cardDijkstraDist);
+
+    layoutD->addWidget(headerD);
+    layoutD->addWidget(m_viewDijkstra, 1);
+    layoutD->addWidget(cardD);
+
+    m_containerDijkstra->hide();
+    m_centralLayout->addWidget(m_containerDijkstra);
+
+    // --- Comparison view 2: A* ---
+    m_containerAStar = new QWidget(this);
+    QVBoxLayout *layoutA = new QVBoxLayout(m_containerAStar);
+    layoutA->setContentsMargins(0, 0, 0, 0);
+    layoutA->setSpacing(6);
+
+    QLabel *headerA = new QLabel("A* Algorithm (Distance Heuristic)", this);
+    headerA->setAlignment(Qt::AlignCenter);
+    headerA->setStyleSheet("font-weight: bold; font-size: 12px; color: #1E293B; background-color: transparent; padding: 6px; border: 1px solid #D8D8D8; border-radius: 0px;");
+
     m_sceneAStar = new QGraphicsScene(this);
     m_sceneAStar->setBackgroundBrush(QBrush(QColor("#FFFFFF")));
     m_viewAStar = new QGraphicsView(m_sceneAStar, this);
     m_viewAStar->setRenderHint(QPainter::Antialiasing, true);
     m_viewAStar->setDragMode(QGraphicsView::ScrollHandDrag);
     m_viewAStar->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
-    m_viewAStar->hide();
-    m_centralLayout->addWidget(m_viewAStar);
 
-    // Comparison view 3: BFS
+    QWidget *cardA = new QWidget(this);
+    cardA->setStyleSheet(cardStyle);
+    QVBoxLayout *cardALayout = new QVBoxLayout(cardA);
+    cardALayout->setContentsMargins(10, 8, 10, 8);
+    cardALayout->setSpacing(3);
+
+    QLabel *titleA = new QLabel("A* METRICS", this);
+    titleA->setStyleSheet("font-weight: bold; color: #15803D; font-size: 11px; margin-bottom: 2px;");
+    m_cardAStarTime = new QLabel("Execution Time: --", this);
+    m_cardAStarVisited = new QLabel("Visited Nodes: 0", this);
+    m_cardAStarDist = new QLabel("Path Distance: --", this);
+
+    cardALayout->addWidget(titleA);
+    cardALayout->addWidget(m_cardAStarTime);
+    cardALayout->addWidget(m_cardAStarVisited);
+    cardALayout->addWidget(m_cardAStarDist);
+
+    layoutA->addWidget(headerA);
+    layoutA->addWidget(m_viewAStar, 1);
+    layoutA->addWidget(cardA);
+
+    m_containerAStar->hide();
+    m_centralLayout->addWidget(m_containerAStar);
+
+    // --- Comparison view 3: BFS ---
+    m_containerBFS = new QWidget(this);
+    QVBoxLayout *layoutB = new QVBoxLayout(m_containerBFS);
+    layoutB->setContentsMargins(0, 0, 0, 0);
+    layoutB->setSpacing(6);
+
+    QLabel *headerB = new QLabel("Breadth First Search (BFS)", this);
+    headerB->setAlignment(Qt::AlignCenter);
+    headerB->setStyleSheet("font-weight: bold; font-size: 12px; color: #1E293B; background-color: transparent; padding: 6px; border: 1px solid #D8D8D8; border-radius: 0px;");
+
     m_sceneBFS = new QGraphicsScene(this);
     m_sceneBFS->setBackgroundBrush(QBrush(QColor("#FFFFFF")));
     m_viewBFS = new QGraphicsView(m_sceneBFS, this);
     m_viewBFS->setRenderHint(QPainter::Antialiasing, true);
     m_viewBFS->setDragMode(QGraphicsView::ScrollHandDrag);
     m_viewBFS->setViewportUpdateMode(QGraphicsView::FullViewportUpdate);
-    m_viewBFS->hide();
-    m_centralLayout->addWidget(m_viewBFS);
+
+    QWidget *cardB = new QWidget(this);
+    cardB->setStyleSheet(cardStyle);
+    QVBoxLayout *cardBLayout = new QVBoxLayout(cardB);
+    cardBLayout->setContentsMargins(10, 8, 10, 8);
+    cardBLayout->setSpacing(3);
+
+    QLabel *titleB = new QLabel("BFS METRICS", this);
+    titleB->setStyleSheet("font-weight: bold; color: #B45309; font-size: 11px; margin-bottom: 2px;");
+    m_cardBFSTime = new QLabel("Execution Time: --", this);
+    m_cardBFSVisited = new QLabel("Visited Nodes: 0", this);
+    m_cardBFSDist = new QLabel("Path Distance: --", this);
+
+    cardBLayout->addWidget(titleB);
+    cardBLayout->addWidget(m_cardBFSTime);
+    cardBLayout->addWidget(m_cardBFSVisited);
+    cardBLayout->addWidget(m_cardBFSDist);
+
+    layoutB->addWidget(headerB);
+    layoutB->addWidget(m_viewBFS, 1);
+    layoutB->addWidget(cardB);
+
+    m_containerBFS->hide();
+    m_centralLayout->addWidget(m_containerBFS);
 
     setCentralWidget(m_centralContainer);
 }
@@ -248,13 +346,40 @@ void MainWindow::setupConnections() {
     connect(m_speedSlider, &QSlider::valueChanged, this, &MainWindow::handleSpeedChanged);
 
     connect(m_animationController, &AnimationController::stepRendered, this, &MainWindow::updateUiForStep);
+    connect(m_animationController, &AnimationController::comparisonStepsRendered, this, &MainWindow::updateUiForComparisonSteps);
     
-    // Dropdown synchronization
+    // Algorithm dropdown connection
+    connect(m_algoCombo, &QComboBox::currentIndexChanged, [this](int idx){
+        if (m_isComparisonMode) {
+            if (idx == 0) {
+                m_statAlgo->setText("Comparison: Showing Dijkstra");
+                m_statTime->setText(m_execTimeDijkstra > 0 ? QString("Execution Time (Dijkstra): %1 ms").arg(m_execTimeDijkstra, 0, 'f', 2) : "Execution Time: --");
+            } else if (idx == 1) {
+                m_statAlgo->setText("Comparison: Showing A*");
+                m_statTime->setText(m_execTimeAStar > 0 ? QString("Execution Time (A*): %1 ms").arg(m_execTimeAStar, 0, 'f', 2) : "Execution Time: --");
+            } else {
+                m_statAlgo->setText("Comparison: Showing BFS");
+                m_statTime->setText(m_execTimeBFS > 0 ? QString("Execution Time (BFS): %1 ms").arg(m_execTimeBFS, 0, 'f', 2) : "Execution Time: --");
+            }
+        } else {
+            m_statAlgo->setText("Active: " + m_algoCombo->currentText());
+            m_statTime->setText(m_execTimeSingle > 0 ? QString("Execution Time: %1 ms").arg(m_execTimeSingle, 0, 'f', 2) : "Execution Time: --");
+            handleReset();
+        }
+    });
+
+    // Dropdown synchronization & immediate visual highlights
     connect(m_startNodeCombo, &QComboBox::currentIndexChanged, [this](int idx){
-        if (idx >= 0) m_selectedStartNodeId = m_startNodeCombo->itemData(idx).toString();
+        if (idx >= 0) {
+            m_selectedStartNodeId = m_startNodeCombo->itemData(idx).toString();
+            updateStartEndNodeHighlights();
+        }
     });
     connect(m_endNodeCombo, &QComboBox::currentIndexChanged, [this](int idx){
-        if (idx >= 0) m_selectedEndNodeId = m_endNodeCombo->itemData(idx).toString();
+        if (idx >= 0) {
+            m_selectedEndNodeId = m_endNodeCombo->itemData(idx).toString();
+            updateStartEndNodeHighlights();
+        }
     });
 }
 
@@ -274,9 +399,10 @@ void MainWindow::createToolBar() {
     QPushButton *btnZoomOut = new QPushButton("Zoom Out", this);
     QPushButton *btnFit = new QPushButton("Fit View", this);
 
-    // Toggle button for right side panel
-    m_toggleRightBtn = new QPushButton("Collapse Panel", this);
+    // Toggle button for right side panel with high-fidelity chevron typography
+    m_toggleRightBtn = new QPushButton("» Collapse Panel", this);
     m_toggleRightBtn->setToolTip("Toggle Right State Inspector Panel Visibility");
+    m_toggleRightBtn->setStyleSheet("QPushButton { font-weight: bold; color: #2E6DA4; border: 1px solid #2E6DA4; background-color: #FFFFFF; border-radius: 0px; padding: 3px 8px; } QPushButton:hover { background-color: #D9ECFF; }");
 
     // Comparison Mode Option
     QPushButton *btnSingleMode = new QPushButton("Single Solver", this);
@@ -378,7 +504,9 @@ void MainWindow::loadGraphIntoScene() {
     if (m_startNodeCombo->count() > 0) {
         m_startNodeCombo->setCurrentIndex(0);
         m_endNodeCombo->setCurrentIndex(m_endNodeCombo->count() - 1);
+        m_selectedStartNodeId = m_startNodeCombo->itemData(0).toString();
         m_selectedEndNodeId = m_endNodeCombo->itemData(m_endNodeCombo->count() - 1).toString();
+        updateStartEndNodeHighlights();
     }
 
     handleFitView();
@@ -390,29 +518,64 @@ void MainWindow::handleRunAlgorithm() {
         return;
     }
 
-    int idx = m_algoCombo->currentIndex();
-    if (idx == 0) {
-        m_activeAlgorithm = std::make_shared<DijkstraAlgorithm>();
-    } else if (idx == 1) {
-        m_activeAlgorithm = std::make_shared<AStarAlgorithm>();
-    } else {
-        m_activeAlgorithm = std::make_shared<BFSAlgorithm>();
-    }
-
-    m_statAlgo->setText("Active: " + m_algoCombo->currentText());
-    
-    // Clear graphics highlighting prior to launching
     handleClearPath();
 
-    QElapsedTimer timer;
-    timer.start();
-    std::vector<PathfindingStep> steps = m_activeAlgorithm->solve(m_graph, m_selectedStartNodeId, m_selectedEndNodeId);
-    qint64 durationMs = timer.elapsed();
+    if (m_isComparisonMode) {
+        m_statAlgo->setText("Mode: Parallel Comparison (3 Algorithms)");
 
-    m_animationController->setSteps(steps, m_speedSlider->value());
-    m_animationController->start();
+        DijkstraAlgorithm dijkstraSolver;
+        AStarAlgorithm astarSolver;
+        BFSAlgorithm bfsSolver;
 
-    m_statTime->setText(QString("Execution Time: %1 ms").arg(durationMs));
+        QElapsedTimer t1, t2, t3;
+
+        t1.start();
+        std::vector<PathfindingStep> stepsDijkstra = dijkstraSolver.solve(m_graph, m_selectedStartNodeId, m_selectedEndNodeId);
+        m_execTimeDijkstra = static_cast<double>(t1.nsecsElapsed()) / 1000000.0;
+        if (m_execTimeDijkstra < 0.01) m_execTimeDijkstra = 0.01;
+
+        t2.start();
+        std::vector<PathfindingStep> stepsAStar = astarSolver.solve(m_graph, m_selectedStartNodeId, m_selectedEndNodeId);
+        m_execTimeAStar = static_cast<double>(t2.nsecsElapsed()) / 1000000.0;
+        if (m_execTimeAStar < 0.01) m_execTimeAStar = 0.01;
+
+        t3.start();
+        std::vector<PathfindingStep> stepsBFS = bfsSolver.solve(m_graph, m_selectedStartNodeId, m_selectedEndNodeId);
+        m_execTimeBFS = static_cast<double>(t3.nsecsElapsed()) / 1000000.0;
+        if (m_execTimeBFS < 0.01) m_execTimeBFS = 0.01;
+
+        // Immediately update execution time metrics on cards below each map view
+        m_cardDijkstraTime->setText(QString("Execution Time: %1 ms").arg(m_execTimeDijkstra, 0, 'f', 2));
+        m_cardAStarTime->setText(QString("Execution Time: %1 ms").arg(m_execTimeAStar, 0, 'f', 2));
+        m_cardBFSTime->setText(QString("Execution Time: %1 ms").arg(m_execTimeBFS, 0, 'f', 2));
+
+        m_statTime->setText(QString("Parallel Solvers Overhead: %1 ms").arg(m_execTimeDijkstra + m_execTimeAStar + m_execTimeBFS, 0, 'f', 2));
+
+        m_animationController->setComparisonSteps(stepsDijkstra, stepsAStar, stepsBFS, m_speedSlider->value());
+        m_animationController->start();
+    } else {
+        int idx = m_algoCombo->currentIndex();
+        if (idx == 0) {
+            m_activeAlgorithm = std::make_shared<DijkstraAlgorithm>();
+        } else if (idx == 1) {
+            m_activeAlgorithm = std::make_shared<AStarAlgorithm>();
+        } else {
+            m_activeAlgorithm = std::make_shared<BFSAlgorithm>();
+        }
+
+        m_statAlgo->setText("Active: " + m_algoCombo->currentText());
+
+        QElapsedTimer timer;
+        timer.start();
+        std::vector<PathfindingStep> steps = m_activeAlgorithm->solve(m_graph, m_selectedStartNodeId, m_selectedEndNodeId);
+        m_execTimeSingle = static_cast<double>(timer.nsecsElapsed()) / 1000000.0;
+        if (m_execTimeSingle < 0.01) m_execTimeSingle = 0.01;
+
+        m_animationController->setSteps(steps, m_speedSlider->value());
+        m_animationController->start();
+
+        m_statTime->setText(QString("Execution Time: %1 ms").arg(m_execTimeSingle, 0, 'f', 2));
+    }
 }
 
 void MainWindow::handlePauseAlgorithm() {
@@ -439,6 +602,21 @@ void MainWindow::handleClearPath() {
     m_statDistance->setText("Total distance: --");
     m_statDistance->setStyleSheet("");
 
+    m_cardDijkstraTime->setText("Execution Time: --");
+    m_cardDijkstraVisited->setText("Visited Nodes: 0");
+    m_cardDijkstraDist->setText("Path Distance: --");
+    m_cardDijkstraDist->setStyleSheet("");
+
+    m_cardAStarTime->setText("Execution Time: --");
+    m_cardAStarVisited->setText("Visited Nodes: 0");
+    m_cardAStarDist->setText("Path Distance: --");
+    m_cardAStarDist->setStyleSheet("");
+
+    m_cardBFSTime->setText("Execution Time: --");
+    m_cardBFSVisited->setText("Visited Nodes: 0");
+    m_cardBFSDist->setText("Path Distance: --");
+    m_cardBFSDist->setStyleSheet("");
+
     auto clearSceneState = [](QGraphicsScene *scene) {
         if (!scene) return;
         for (QGraphicsItem *item : scene->items()) {
@@ -454,6 +632,8 @@ void MainWindow::handleClearPath() {
     clearSceneState(m_sceneDijkstra);
     clearSceneState(m_sceneAStar);
     clearSceneState(m_sceneBFS);
+
+    updateStartEndNodeHighlights();
 }
 
 void MainWindow::handleSpeedChanged(int value) {
@@ -511,12 +691,12 @@ void MainWindow::handleToggleRightPanel() {
     if (m_rightDock->isVisible()) {
         m_rightDock->hide();
         if (m_toggleRightBtn) {
-            m_toggleRightBtn->setText("Expand Panel");
+            m_toggleRightBtn->setText("« Expand Panel");
         }
     } else {
         m_rightDock->show();
         if (m_toggleRightBtn) {
-            m_toggleRightBtn->setText("Collapse Panel");
+            m_toggleRightBtn->setText("» Collapse Panel");
         }
     }
 }
@@ -527,26 +707,75 @@ void MainWindow::handleComparisonModeToggled(bool enabled) {
 
     if (enabled) {
         m_view->hide();
-        m_viewDijkstra->show();
-        m_viewAStar->show();
-        m_viewBFS->show();
+        m_containerDijkstra->show();
+        m_containerAStar->show();
+        m_containerBFS->show();
+
+        m_runBtn->setText("Run Parallel Comparison");
+        m_runBtn->setStyleSheet("QPushButton { background-color: #059669; color: white; border-color: #047857; font-weight: bold; }"
+                                "QPushButton:hover { background-color: #10B981; }");
+        m_algoCombo->setEnabled(false);
+
+        m_statAlgo->setText("Mode: Parallel Comparison (3 Algorithms)");
+        m_statCurrNode->setText("Current Node: --");
+        m_statVisited->setText("Visited Nodes: --");
+        m_statDistance->setText("Total distance: --");
+        m_statTime->setText("Execution Time: --");
     } else {
         m_view->show();
-        m_viewDijkstra->hide();
-        m_viewAStar->hide();
-        m_viewBFS->hide();
+        m_containerDijkstra->hide();
+        m_containerAStar->hide();
+        m_containerBFS->hide();
+
+        m_runBtn->setText("Run Search");
+        m_runBtn->setStyleSheet("QPushButton { background-color: #2E6DA4; color: white; border-color: #204D74; font-weight: bold; }"
+                                "QPushButton:hover { background-color: #337AB7; }");
+        m_algoCombo->setEnabled(true);
+
+        m_statAlgo->setText("Active: " + m_algoCombo->currentText());
+        m_statTime->setText(m_execTimeSingle > 0 ? QString("Execution Time: %1 ms").arg(m_execTimeSingle, 0, 'f', 2) : "Execution Time: --");
     }
     handleFitView();
+    updateStartEndNodeHighlights();
 }
 
 void MainWindow::handleNodeSelected(const QString &nodeId, bool isStart) {
     if (isStart) {
+        m_selectedStartNodeId = nodeId;
         int idx = m_startNodeCombo->findData(nodeId);
         if (idx >= 0) m_startNodeCombo->setCurrentIndex(idx);
     } else {
+        m_selectedEndNodeId = nodeId;
         int idx = m_endNodeCombo->findData(nodeId);
         if (idx >= 0) m_endNodeCombo->setCurrentIndex(idx);
     }
+    updateStartEndNodeHighlights();
+}
+
+void MainWindow::updateStartEndNodeHighlights() {
+    auto highlightStartEnd = [this](QGraphicsScene *scene) {
+        if (!scene) return;
+        for (QGraphicsItem *item : scene->items()) {
+            if (auto *nodeItem = dynamic_cast<NodeItem*>(item)) {
+                QString id = nodeItem->getNodeId();
+                if (!m_selectedStartNodeId.isEmpty() && id == m_selectedStartNodeId) {
+                    nodeItem->setVisualState(NodeItem::State::Start);
+                } else if (!m_selectedEndNodeId.isEmpty() && id == m_selectedEndNodeId) {
+                    nodeItem->setVisualState(NodeItem::State::End);
+                } else {
+                    if (nodeItem->getVisualState() == NodeItem::State::Start ||
+                        nodeItem->getVisualState() == NodeItem::State::End) {
+                        nodeItem->setVisualState(NodeItem::State::Default);
+                    }
+                }
+            }
+        }
+    };
+
+    highlightStartEnd(m_scene);
+    highlightStartEnd(m_sceneDijkstra);
+    highlightStartEnd(m_sceneAStar);
+    highlightStartEnd(m_sceneBFS);
 }
 
 void MainWindow::updateUiForStep(const PathfindingStep &step) {
@@ -648,10 +877,157 @@ void MainWindow::updateUiForStep(const PathfindingStep &step) {
 
     if (step.type == PathfindingStep::Type::PathFound) {
         m_statDistance->setText(QString("Total distance: %1 m").arg(step.totalDistance, 0, 'f', 1));
-        m_statDistance->setStyleSheet("QLabel { background-color: #FEF08A; color: #854D0E; font-weight: bold; padding: 2px; border: 1px solid #FACC15; border-radius: 2px; }");
+        m_statDistance->setStyleSheet("QLabel { background-color: #FEF08A; color: #854D0E; font-weight: bold; padding: 2px; border: 1px solid #FACC15; border-radius: 0px; }");
         QMessageBox::information(this, "Success", QString("Optimal path rendered successfully! Distance: %1 meters.").arg(step.totalDistance, 0, 'f', 1));
     } else if (step.type == PathfindingStep::Type::NoPath) {
         m_statDistance->setText("Unreachable");
         QMessageBox::warning(this, "No Path Found", "No connection could be resolved between the chosen points.");
+    }
+}
+
+void MainWindow::updateUiForComparisonSteps(const PathfindingStep &dijkstra, const PathfindingStep &astar, const PathfindingStep &bfs) {
+    auto highlightScene = [this](QGraphicsScene *scene, const PathfindingStep &step) {
+        if (!scene) return;
+
+        QSet<QString> midPathNodes;
+        if (!step.finalPathEdges.isEmpty()) {
+            for (const QString &edgeKey : step.finalPathEdges) {
+                QStringList parts = edgeKey.split('_');
+                if (parts.size() == 2) {
+                    QString node1 = parts.at(0);
+                    QString node2 = parts.at(1);
+                    if (node1 != m_selectedStartNodeId && node1 != m_selectedEndNodeId) {
+                        midPathNodes.insert(node1);
+                    }
+                    if (node2 != m_selectedStartNodeId && node2 != m_selectedEndNodeId) {
+                        midPathNodes.insert(node2);
+                    }
+                } else {
+                    for (const Edge &e : m_graph.getEdges()) {
+                        if (e.id == edgeKey) {
+                            if (e.sourceId != m_selectedStartNodeId && e.sourceId != m_selectedEndNodeId) {
+                                midPathNodes.insert(e.sourceId);
+                            }
+                            if (e.targetId != m_selectedStartNodeId && e.targetId != m_selectedEndNodeId) {
+                                midPathNodes.insert(e.targetId);
+                            }
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        for (QGraphicsItem *item : scene->items()) {
+            if (auto *nodeItem = dynamic_cast<NodeItem*>(item)) {
+                QString id = nodeItem->getNodeId();
+                if (id == m_selectedStartNodeId) {
+                    nodeItem->setVisualState(NodeItem::State::Start);
+                } else if (id == m_selectedEndNodeId) {
+                    nodeItem->setVisualState(NodeItem::State::End);
+                } else if (midPathNodes.contains(id)) {
+                    nodeItem->setVisualState(NodeItem::State::Default);
+                } else if (id == step.currentNodeId) {
+                    nodeItem->setVisualState(NodeItem::State::Active);
+                } else if (step.visitedNodes.contains(id)) {
+                    nodeItem->setVisualState(NodeItem::State::Visited);
+                } else {
+                    nodeItem->setVisualState(NodeItem::State::Default);
+                }
+            } else if (auto *edgeItem = dynamic_cast<EdgeItem*>(item)) {
+                QString eId = edgeItem->getEdgeId();
+                QString sId = edgeItem->getSourceId();
+                QString tId = edgeItem->getTargetId();
+                QString key1 = sId + "_" + tId;
+                QString key2 = tId + "_" + sId;
+                if (step.finalPathEdges.contains(eId) || step.finalPathEdges.contains(key1) || step.finalPathEdges.contains(key2)) {
+                    edgeItem->setVisualState(EdgeItem::State::ShortestPath);
+                } else if (step.activeEdgeId == eId) {
+                    edgeItem->setVisualState(EdgeItem::State::Relaxed);
+                } else {
+                    edgeItem->setVisualState(EdgeItem::State::Default);
+                }
+            }
+        }
+    };
+
+    highlightScene(m_sceneDijkstra, dijkstra);
+    highlightScene(m_sceneAStar, astar);
+    highlightScene(m_sceneBFS, bfs);
+
+    // Update per-map metric cards below each map in comparison mode
+    // 1. Dijkstra Card
+    m_cardDijkstraVisited->setText(QString("Visited Nodes: %1").arg(dijkstra.visitedNodes.size()));
+    if (dijkstra.type == PathfindingStep::Type::PathFound) {
+        m_cardDijkstraDist->setText(QString("Path Distance: %1 m").arg(dijkstra.totalDistance, 0, 'f', 1));
+        m_cardDijkstraDist->setStyleSheet("font-weight: bold; color: #1E40AF;");
+    } else if (dijkstra.type == PathfindingStep::Type::NoPath) {
+        m_cardDijkstraDist->setText("Path Distance: Unreachable");
+        m_cardDijkstraDist->setStyleSheet("font-weight: bold; color: #DC2626;");
+    } else {
+        m_cardDijkstraDist->setText(QString("Path Distance: Searching... (Step %1)").arg(dijkstra.stepIndex));
+        m_cardDijkstraDist->setStyleSheet("color: #475569;");
+    }
+
+    // 2. A* Card
+    m_cardAStarVisited->setText(QString("Visited Nodes: %1").arg(astar.visitedNodes.size()));
+    if (astar.type == PathfindingStep::Type::PathFound) {
+        m_cardAStarDist->setText(QString("Path Distance: %1 m").arg(astar.totalDistance, 0, 'f', 1));
+        m_cardAStarDist->setStyleSheet("font-weight: bold; color: #15803D;");
+    } else if (astar.type == PathfindingStep::Type::NoPath) {
+        m_cardAStarDist->setText("Path Distance: Unreachable");
+        m_cardAStarDist->setStyleSheet("font-weight: bold; color: #DC2626;");
+    } else {
+        m_cardAStarDist->setText(QString("Path Distance: Searching... (Step %1)").arg(astar.stepIndex));
+        m_cardAStarDist->setStyleSheet("color: #475569;");
+    }
+
+    // 3. BFS Card
+    m_cardBFSVisited->setText(QString("Visited Nodes: %1").arg(bfs.visitedNodes.size()));
+    if (bfs.type == PathfindingStep::Type::PathFound) {
+        m_cardBFSDist->setText(QString("Path Distance: %1 m").arg(bfs.totalDistance, 0, 'f', 1));
+        m_cardBFSDist->setStyleSheet("font-weight: bold; color: #B45309;");
+    } else if (bfs.type == PathfindingStep::Type::NoPath) {
+        m_cardBFSDist->setText("Path Distance: Unreachable");
+        m_cardBFSDist->setStyleSheet("font-weight: bold; color: #DC2626;");
+    } else {
+        m_cardBFSDist->setText(QString("Path Distance: Searching... (Step %1)").arg(bfs.stepIndex));
+        m_cardBFSDist->setStyleSheet("color: #475569;");
+    }
+
+    // Sync state inspector layout with active view representation
+    int idx = m_algoCombo->currentIndex();
+    PathfindingStep activeStep = (idx == 0) ? dijkstra : ((idx == 1) ? astar : bfs);
+    m_statAlgo->setText("Mode: Parallel Comparison (3 Algorithms Running)");
+
+    m_currentStepLabel->setText(QString("Step: %1").arg(activeStep.stepIndex));
+    m_statCurrNode->setText("Current Node: " + activeStep.currentNodeId);
+    m_statVisited->setText(QString("Visited Nodes: %1").arg(activeStep.visitedNodes.size()));
+
+    m_logWidget->clear();
+    m_logWidget->addItem(QString("[Dijkstra %1] %2").arg(dijkstra.stepIndex).arg(dijkstra.logMessage));
+    m_logWidget->addItem(QString("[A* %1] %2").arg(astar.stepIndex).arg(astar.logMessage));
+    m_logWidget->addItem(QString("[BFS %1] %2").arg(bfs.stepIndex).arg(bfs.logMessage));
+
+    m_priorityQueueList->clear();
+    for (const auto &entry : activeStep.frontier) {
+        m_priorityQueueList->addItem(QString("Node %1: f=%2").arg(entry.nodeId).arg(entry.priority, 0, 'f', 1));
+    }
+
+    m_distanceTable->setRowCount(0);
+    int row = 0;
+    for (auto it = activeStep.distanceTable.begin(); it != activeStep.distanceTable.end(); ++it) {
+        if (it.value() == std::numeric_limits<double>::infinity()) continue;
+        m_distanceTable->insertRow(row);
+        m_distanceTable->setItem(row, 0, new QTableWidgetItem(it.key()));
+        m_distanceTable->setItem(row, 1, new QTableWidgetItem(QString::number(it.value(), 'f', 1)));
+        row++;
+    }
+
+    if (activeStep.type == PathfindingStep::Type::PathFound) {
+        m_statDistance->setText(QString("Distance: %1 m").arg(activeStep.totalDistance, 0, 'f', 1));
+        m_statDistance->setStyleSheet("QLabel { background-color: #FEF08A; color: #854D0E; font-weight: bold; padding: 2px; border: 1px solid #FACC15; border-radius: 0px; }");
+    } else if (activeStep.type == PathfindingStep::Type::NoPath) {
+        m_statDistance->setText("Unreachable");
     }
 }

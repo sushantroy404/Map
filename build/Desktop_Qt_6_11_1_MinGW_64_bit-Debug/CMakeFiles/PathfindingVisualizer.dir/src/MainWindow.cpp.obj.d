@@ -1,6 +1,6 @@
 CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj: \
- C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (8)\src\MainWindow.cpp \
- C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (8)\src\MainWindow.h \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (13)\src\MainWindow.cpp \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (13)\src\MainWindow.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QMainWindow \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qmainwindow.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -443,13 +443,13 @@ CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qbuttongroup.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGroupBox \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgroupbox.h \
- C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (8)\src\Graph.h \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (13)\src\Graph.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QString \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QPointF \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QMap \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QVector \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qvector.h \
- C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (8)\src\AnimationController.h \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (13)\src\AnimationController.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QObject \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QTimer \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qtimer.h \
@@ -457,16 +457,16 @@ CMakeFiles/PathfindingVisualizer.dir/src/MainWindow.cpp.obj: \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qabstracteventdispatcher.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qeventloop.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/qdeadlinetimer.h \
- C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (8)\src\Algorithms.h \
  C:/Qt/6.11.1/mingw_64/include/QtCore/QSet \
- C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (8)\src\OsmLoader.h \
- C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (8)\src\NodeItem.h \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (13)\src\Algorithms.h \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (13)\src\OsmLoader.h \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (13)\src\NodeItem.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsEllipseItem \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/qgraphicsitem.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/qpainterpath.h \
  C:/Qt/6.11.1/mingw_64/include/QtGui/QPen \
  C:/Qt/6.11.1/mingw_64/include/QtGui/QBrush \
- C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (8)\src\EdgeItem.h \
+ C:\Users\Admin\Downloads\PathfindingVisualizer_Qt6_C++\ (13)\src\EdgeItem.h \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QGraphicsLineItem \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QVBoxLayout \
  C:/Qt/6.11.1/mingw_64/include/QtWidgets/QFileDialog \

@@ -43,6 +43,10 @@ template <> constexpr inline auto AnimationController::qt_create_metaobjectdata<
         "",
         "PathfindingStep",
         "step",
+        "comparisonStepsRendered",
+        "dijkstraStep",
+        "astarStep",
+        "bfsStep",
         "processNextStep"
     };
 
@@ -51,8 +55,12 @@ template <> constexpr inline auto AnimationController::qt_create_metaobjectdata<
         QtMocHelpers::SignalData<void(const PathfindingStep &)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
             { 0x80000000 | 3, 4 },
         }}),
+        // Signal 'comparisonStepsRendered'
+        QtMocHelpers::SignalData<void(const PathfindingStep &, const PathfindingStep &, const PathfindingStep &)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 3, 6 }, { 0x80000000 | 3, 7 }, { 0x80000000 | 3, 8 },
+        }}),
         // Slot 'processNextStep'
-        QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -77,12 +85,15 @@ void AnimationController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->stepRendered((*reinterpret_cast<std::add_pointer_t<PathfindingStep>>(_a[1]))); break;
-        case 1: _t->processNextStep(); break;
+        case 1: _t->comparisonStepsRendered((*reinterpret_cast<std::add_pointer_t<PathfindingStep>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<PathfindingStep>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<PathfindingStep>>(_a[3]))); break;
+        case 2: _t->processNextStep(); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
         if (QtMocHelpers::indexOfMethod<void (AnimationController::*)(const PathfindingStep & )>(_a, &AnimationController::stepRendered, 0))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (AnimationController::*)(const PathfindingStep & , const PathfindingStep & , const PathfindingStep & )>(_a, &AnimationController::comparisonStepsRendered, 1))
             return;
     }
 }
@@ -106,14 +117,14 @@ int AnimationController::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 3;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 3)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 2;
+        _id -= 3;
     }
     return _id;
 }
@@ -122,5 +133,11 @@ int AnimationController::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 void AnimationController::stepRendered(const PathfindingStep & _t1)
 {
     QMetaObject::activate<void>(this, &staticMetaObject, 0, nullptr, _t1);
+}
+
+// SIGNAL 1
+void AnimationController::comparisonStepsRendered(const PathfindingStep & _t1, const PathfindingStep & _t2, const PathfindingStep & _t3)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1, _t2, _t3);
 }
 QT_WARNING_POP

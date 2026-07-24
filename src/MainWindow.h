@@ -44,6 +44,7 @@ private slots:
     
     // Animation callbacks
     void updateUiForStep(const PathfindingStep &step);
+    void updateUiForComparisonSteps(const PathfindingStep &dijkstra, const PathfindingStep &astar, const PathfindingStep &bfs);
 
 private:
     void createActions();
@@ -85,13 +86,30 @@ private:
     QGraphicsView *m_view;
     QGraphicsScene *m_scene;
 
-    // Comparison Mode Multi-Views
+    // Comparison Mode Multi-Views & Multi-Containers
+    QWidget *m_containerDijkstra;
+    QWidget *m_containerAStar;
+    QWidget *m_containerBFS;
+
     QGraphicsView *m_viewDijkstra;
     QGraphicsView *m_viewAStar;
     QGraphicsView *m_viewBFS;
     QGraphicsScene *m_sceneDijkstra;
     QGraphicsScene *m_sceneAStar;
     QGraphicsScene *m_sceneBFS;
+
+    // Per-map metrics labels below each map in comparison mode
+    QLabel *m_cardDijkstraTime;
+    QLabel *m_cardDijkstraVisited;
+    QLabel *m_cardDijkstraDist;
+
+    QLabel *m_cardAStarTime;
+    QLabel *m_cardAStarVisited;
+    QLabel *m_cardAStarDist;
+
+    QLabel *m_cardBFSTime;
+    QLabel *m_cardBFSVisited;
+    QLabel *m_cardBFSDist;
 
     // UI elements - Right Information Panels (Docked)
     QDockWidget *m_rightDock;
@@ -105,4 +123,12 @@ private:
     QString m_selectedStartNodeId;
     QString m_selectedEndNodeId;
     bool m_isComparisonMode;
+
+    // Execution performance metrics
+    double m_execTimeDijkstra;
+    double m_execTimeAStar;
+    double m_execTimeBFS;
+    double m_execTimeSingle;
+
+    void updateStartEndNodeHighlights();
 };
